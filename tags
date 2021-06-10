@@ -1,0 +1,808 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+$(BUILD_DIR)/%_c.o	Makefile	/^$(BUILD_DIR)\/%_c.o: $(SRC_DIR)\/%.c$/;"	t	language:Make
+$(BUILD_DIR)/%_s.o	Makefile	/^$(BUILD_DIR)\/%_s.o: $(SRC_DIR)\/%.S$/;"	t	language:Make
+.bss	src/linker.ld	/^	.bss : { *(.bss*) } $/;"	S	language:LdScript
+.data	src/linker.ld	/^	.data : { *(.data) }$/;"	S	language:LdScript
+.rodata	src/linker.ld	/^	.rodata :$/;"	S	language:LdScript
+.text	src/linker.ld	/^	.text :$/;"	S	language:LdScript
+.text.boot	src/linker.ld	/^	.text.boot : { *(.text.boot) }$/;"	S	language:LdScript
+ALIGN	include/type.h	/^#define ALIGN(/;"	d	language:C++	signature:(x,a)
+ARCH_PHYS_OFFSET	include/asm/base.h	/^#define ARCH_PHYS_OFFSET /;"	d	language:C++
+ARMGNU	Makefile	/^ARMGNU ?= aarch64-linux-gnu$/;"	m	language:Make
+ARM_CONTROL	include/asm/arm_local_reg.h	/^#define ARM_CONTROL /;"	d	language:C++
+ARM_LOCAL_BASE	include/asm/base.h	/^#define ARM_LOCAL_BASE /;"	d	language:C++
+ARM_LOCAL_FRQ_SOURCE0	include/asm/arm_local_reg.h	/^#define ARM_LOCAL_FRQ_SOURCE0 /;"	d	language:C++
+ARM_LOCAL_FRQ_SOURCE1	include/asm/arm_local_reg.h	/^#define ARM_LOCAL_FRQ_SOURCE1 /;"	d	language:C++
+ARM_LOCAL_FRQ_SOURCE2	include/asm/arm_local_reg.h	/^#define ARM_LOCAL_FRQ_SOURCE2 /;"	d	language:C++
+ARM_LOCAL_FRQ_SOURCE3	include/asm/arm_local_reg.h	/^#define ARM_LOCAL_FRQ_SOURCE3 /;"	d	language:C++
+ARM_LOCAL_IRQ_SOURCE0	include/asm/arm_local_reg.h	/^#define ARM_LOCAL_IRQ_SOURCE0 /;"	d	language:C++
+ARM_LOCAL_IRQ_SOURCE1	include/asm/arm_local_reg.h	/^#define ARM_LOCAL_IRQ_SOURCE1 /;"	d	language:C++
+ARM_LOCAL_IRQ_SOURCE2	include/asm/arm_local_reg.h	/^#define ARM_LOCAL_IRQ_SOURCE2 /;"	d	language:C++
+ARM_LOCAL_IRQ_SOURCE3	include/asm/arm_local_reg.h	/^#define ARM_LOCAL_IRQ_SOURCE3 /;"	d	language:C++
+ARM_TIMER_BASE	include/asm/timer.h	/^#define ARM_TIMER_BASE /;"	d	language:C++
+ARM_TIMER_CLR	include/asm/timer.h	/^#define ARM_TIMER_CLR /;"	d	language:C++
+ARM_TIMER_CTRL	include/asm/timer.h	/^#define ARM_TIMER_CTRL /;"	d	language:C++
+ARM_TIMER_IRQ	include/asm/irq.h	/^#define ARM_TIMER_IRQ /;"	d	language:C++
+ARM_TIMER_LOAD	include/asm/timer.h	/^#define ARM_TIMER_LOAD /;"	d	language:C++
+ARM_TIMER_VALUE	include/asm/timer.h	/^#define ARM_TIMER_VALUE /;"	d	language:C++
+ARRAY_SIZE	include/type.h	/^#define ARRAY_SIZE(/;"	d	language:C++	signature:(x)
+ASMOPS	Makefile	/^ASMOPS = -g -Iinclude $/;"	m	language:Make
+ASM_BARRIER_H	include/asm/barrier.h	/^#define ASM_BARRIER_H$/;"	d	language:C++
+ASM_ESR_H	include/esr.h	/^#define ASM_ESR_H$/;"	d	language:C++
+ASM_FILES	Makefile	/^ASM_FILES = $(wildcard $(SRC_DIR)\/*.S)$/;"	m	language:Make
+ASM_PGTABLE_H	include/asm/pgtable.h	/^#define ASM_PGTABLE_H$/;"	d	language:C++
+ASM_PGTABLE_HWDEF_H	include/asm/pgtable_hwdef.h	/^#define ASM_PGTABLE_HWDEF_H$/;"	d	language:C++
+ASM_PGTABLE_PROT_H	include/asm/pgtable_prot.h	/^#define ASM_PGTABLE_PROT_H$/;"	d	language:C++
+ASM_PGTABLE_TYPES_H	include/asm/pgtable_types.h	/^#define ASM_PGTABLE_TYPES_H$/;"	d	language:C++
+AXI_IRQ	include/asm/arm_local_reg.h	/^#define AXI_IRQ /;"	d	language:C++
+AXI_QUIET	include/asm/arm_local_reg.h	/^#define AXI_QUIET /;"	d	language:C++
+AXI_QUIET_TIME	include/asm/arm_local_reg.h	/^#define AXI_QUIET_TIME /;"	d	language:C++
+BAD_ERROR	src/entry.S	/^#define BAD_ERROR	/;"	d	language:CPreProcessor	file:
+BAD_FIQ	src/entry.S	/^#define BAD_FIQ	/;"	d	language:CPreProcessor	file:
+BAD_RIQ	src/entry.S	/^#define BAD_RIQ	/;"	d	language:CPreProcessor	file:
+BAD_SYNC	src/entry.S	/^#define BAD_SYNC	/;"	d	language:CPreProcessor	file:
+BIT	include/type.h	/^#define BIT(/;"	d	language:C++	signature:(nr)
+BUILD_DIR	Makefile	/^BUILD_DIR = build$/;"	m	language:Make
+CNTPNSIRQ_Int	include/asm/irq.h	/^#define CNTPNSIRQ_Int /;"	d	language:C++
+CNT_HP_IRQ	include/asm/arm_local_reg.h	/^#define CNT_HP_IRQ /;"	d	language:C++
+CNT_HP_IRQ_FIQ	include/asm/arm_local_reg.h	/^#define CNT_HP_IRQ_FIQ /;"	d	language:C++
+CNT_PNS_IRQ	include/asm/arm_local_reg.h	/^#define CNT_PNS_IRQ /;"	d	language:C++
+CNT_PNS_IRQ_FIQ	include/asm/arm_local_reg.h	/^#define CNT_PNS_IRQ_FIQ /;"	d	language:C++
+CNT_PS_IRQ	include/asm/arm_local_reg.h	/^#define CNT_PS_IRQ /;"	d	language:C++
+CNT_PS_IRQ_FIQ	include/asm/arm_local_reg.h	/^#define CNT_PS_IRQ_FIQ /;"	d	language:C++
+CNT_V_IRQ	include/asm/arm_local_reg.h	/^#define CNT_V_IRQ /;"	d	language:C++
+CNT_V_IRQ_FIQ	include/asm/arm_local_reg.h	/^#define CNT_V_IRQ_FIQ /;"	d	language:C++
+CONFIG_ARM64_VA_BITS	include/mm.h	/^#define CONFIG_ARM64_VA_BITS /;"	d	language:C++
+CONFIG_LOG_BUF_SHIFT	src/printk.c	/^#define CONFIG_LOG_BUF_SHIFT /;"	d	language:C	file:
+CONSOLE_PRINT_BUFFER_SIZE	src/printk.c	/^#define CONSOLE_PRINT_BUFFER_SIZE /;"	d	language:C	file:
+CORE0_INT_CTR	include/asm/irq.h	/^#define CORE0_INT_CTR /;"	d	language:C++
+CORE0_INT_SOURCE	include/asm/irq.h	/^#define CORE0_INT_SOURCE /;"	d	language:C++
+CORE_IRQ	include/asm/arm_local_reg.h	/^#define CORE_IRQ /;"	d	language:C++
+CORE_IRQ_CONTROL	include/asm/arm_local_reg.h	/^#define CORE_IRQ_CONTROL /;"	d	language:C++
+CTRL_23BIT	include/asm/timer.h	/^#define CTRL_23BIT /;"	d	language:C++
+CTRL_ENABLE	include/asm/timer.h	/^#define CTRL_ENABLE /;"	d	language:C++
+CTRL_INT_ENABLE	include/asm/timer.h	/^#define CTRL_INT_ENABLE /;"	d	language:C++
+C_FILES	Makefile	/^C_FILES = $(wildcard $(SRC_DIR)\/*.c)$/;"	m	language:Make
+CurrentEL_EL1	include/sysregs.h	/^#define CurrentEL_EL1 /;"	d	language:C++
+CurrentEL_EL2	include/sysregs.h	/^#define CurrentEL_EL2 /;"	d	language:C++
+CurrentEL_EL3	include/sysregs.h	/^#define CurrentEL_EL3 /;"	d	language:C++
+DEP_FILES	Makefile	/^DEP_FILES = $(OBJ_FILES:%.o=%.d)$/;"	m	language:Make
+DEVICE_SIZE	include/asm/base.h	/^#define DEVICE_SIZE /;"	d	language:C++
+DIV_ROUND_UP	include/type.h	/^#define DIV_ROUND_UP(/;"	d	language:C++	signature:(n,d)
+ENABLE_IRQS_0	include/asm/irq.h	/^#define ENABLE_IRQS_0	/;"	d	language:C++
+ENABLE_IRQS_1	include/asm/irq.h	/^#define ENABLE_IRQS_1	/;"	d	language:C++
+ENABLE_IRQS_2	include/asm/irq.h	/^#define ENABLE_IRQS_2	/;"	d	language:C++
+ESR_ELx_AR	include/esr.h	/^#define ESR_ELx_AR /;"	d	language:C++
+ESR_ELx_AR_SHIFT	include/esr.h	/^#define ESR_ELx_AR_SHIFT	/;"	d	language:C++
+ESR_ELx_CM	include/esr.h	/^#define ESR_ELx_CM /;"	d	language:C++
+ESR_ELx_CM_SHIFT	include/esr.h	/^#define ESR_ELx_CM_SHIFT	/;"	d	language:C++
+ESR_ELx_COND_MASK	include/esr.h	/^#define ESR_ELx_COND_MASK	/;"	d	language:C++
+ESR_ELx_COND_SHIFT	include/esr.h	/^#define ESR_ELx_COND_SHIFT	/;"	d	language:C++
+ESR_ELx_CV	include/esr.h	/^#define ESR_ELx_CV	/;"	d	language:C++
+ESR_ELx_EA	include/esr.h	/^#define ESR_ELx_EA /;"	d	language:C++
+ESR_ELx_EA_SHIFT	include/esr.h	/^#define ESR_ELx_EA_SHIFT	/;"	d	language:C++
+ESR_ELx_EC	include/esr.h	/^#define ESR_ELx_EC(/;"	d	language:C++	signature:(esr)
+ESR_ELx_EC_BKPT32	include/esr.h	/^#define ESR_ELx_EC_BKPT32	/;"	d	language:C++
+ESR_ELx_EC_BREAKPT_CUR	include/esr.h	/^#define ESR_ELx_EC_BREAKPT_CUR	/;"	d	language:C++
+ESR_ELx_EC_BREAKPT_LOW	include/esr.h	/^#define ESR_ELx_EC_BREAKPT_LOW	/;"	d	language:C++
+ESR_ELx_EC_BRK64	include/esr.h	/^#define ESR_ELx_EC_BRK64	/;"	d	language:C++
+ESR_ELx_EC_CP10_ID	include/esr.h	/^#define ESR_ELx_EC_CP10_ID	/;"	d	language:C++
+ESR_ELx_EC_CP14_64	include/esr.h	/^#define ESR_ELx_EC_CP14_64	/;"	d	language:C++
+ESR_ELx_EC_CP14_LS	include/esr.h	/^#define ESR_ELx_EC_CP14_LS	/;"	d	language:C++
+ESR_ELx_EC_CP14_MR	include/esr.h	/^#define ESR_ELx_EC_CP14_MR	/;"	d	language:C++
+ESR_ELx_EC_CP15_32	include/esr.h	/^#define ESR_ELx_EC_CP15_32	/;"	d	language:C++
+ESR_ELx_EC_CP15_64	include/esr.h	/^#define ESR_ELx_EC_CP15_64	/;"	d	language:C++
+ESR_ELx_EC_DABT_CUR	include/esr.h	/^#define ESR_ELx_EC_DABT_CUR	/;"	d	language:C++
+ESR_ELx_EC_DABT_LOW	include/esr.h	/^#define ESR_ELx_EC_DABT_LOW	/;"	d	language:C++
+ESR_ELx_EC_FP_ASIMD	include/esr.h	/^#define ESR_ELx_EC_FP_ASIMD	/;"	d	language:C++
+ESR_ELx_EC_FP_EXC32	include/esr.h	/^#define ESR_ELx_EC_FP_EXC32	/;"	d	language:C++
+ESR_ELx_EC_FP_EXC64	include/esr.h	/^#define ESR_ELx_EC_FP_EXC64	/;"	d	language:C++
+ESR_ELx_EC_HVC32	include/esr.h	/^#define ESR_ELx_EC_HVC32	/;"	d	language:C++
+ESR_ELx_EC_HVC64	include/esr.h	/^#define ESR_ELx_EC_HVC64	/;"	d	language:C++
+ESR_ELx_EC_IABT_CUR	include/esr.h	/^#define ESR_ELx_EC_IABT_CUR	/;"	d	language:C++
+ESR_ELx_EC_IABT_LOW	include/esr.h	/^#define ESR_ELx_EC_IABT_LOW	/;"	d	language:C++
+ESR_ELx_EC_ILL	include/esr.h	/^#define ESR_ELx_EC_ILL	/;"	d	language:C++
+ESR_ELx_EC_IMP_DEF	include/esr.h	/^#define ESR_ELx_EC_IMP_DEF	/;"	d	language:C++
+ESR_ELx_EC_MASK	include/esr.h	/^#define ESR_ELx_EC_MASK	/;"	d	language:C++
+ESR_ELx_EC_MAX	include/esr.h	/^#define ESR_ELx_EC_MAX	/;"	d	language:C++
+ESR_ELx_EC_PC_ALIGN	include/esr.h	/^#define ESR_ELx_EC_PC_ALIGN	/;"	d	language:C++
+ESR_ELx_EC_SERROR	include/esr.h	/^#define ESR_ELx_EC_SERROR	/;"	d	language:C++
+ESR_ELx_EC_SHIFT	include/esr.h	/^#define ESR_ELx_EC_SHIFT	/;"	d	language:C++
+ESR_ELx_EC_SMC32	include/esr.h	/^#define ESR_ELx_EC_SMC32	/;"	d	language:C++
+ESR_ELx_EC_SMC64	include/esr.h	/^#define ESR_ELx_EC_SMC64	/;"	d	language:C++
+ESR_ELx_EC_SOFTSTP_CUR	include/esr.h	/^#define ESR_ELx_EC_SOFTSTP_CUR	/;"	d	language:C++
+ESR_ELx_EC_SOFTSTP_LOW	include/esr.h	/^#define ESR_ELx_EC_SOFTSTP_LOW	/;"	d	language:C++
+ESR_ELx_EC_SP_ALIGN	include/esr.h	/^#define ESR_ELx_EC_SP_ALIGN	/;"	d	language:C++
+ESR_ELx_EC_SVC32	include/esr.h	/^#define ESR_ELx_EC_SVC32	/;"	d	language:C++
+ESR_ELx_EC_SVC64	include/esr.h	/^#define ESR_ELx_EC_SVC64	/;"	d	language:C++
+ESR_ELx_EC_SYS64	include/esr.h	/^#define ESR_ELx_EC_SYS64	/;"	d	language:C++
+ESR_ELx_EC_UNKNOWN	include/esr.h	/^#define ESR_ELx_EC_UNKNOWN	/;"	d	language:C++
+ESR_ELx_EC_VECTOR32	include/esr.h	/^#define ESR_ELx_EC_VECTOR32	/;"	d	language:C++
+ESR_ELx_EC_WATCHPT_CUR	include/esr.h	/^#define ESR_ELx_EC_WATCHPT_CUR	/;"	d	language:C++
+ESR_ELx_EC_WATCHPT_LOW	include/esr.h	/^#define ESR_ELx_EC_WATCHPT_LOW	/;"	d	language:C++
+ESR_ELx_EC_WFx	include/esr.h	/^#define ESR_ELx_EC_WFx	/;"	d	language:C++
+ESR_ELx_FSC	include/esr.h	/^#define ESR_ELx_FSC	/;"	d	language:C++
+ESR_ELx_FSC_EXTABT	include/esr.h	/^#define ESR_ELx_FSC_EXTABT	/;"	d	language:C++
+ESR_ELx_FSC_FAULT	include/esr.h	/^#define ESR_ELx_FSC_FAULT	/;"	d	language:C++
+ESR_ELx_FSC_PERM	include/esr.h	/^#define ESR_ELx_FSC_PERM	/;"	d	language:C++
+ESR_ELx_FSC_TYPE	include/esr.h	/^#define ESR_ELx_FSC_TYPE	/;"	d	language:C++
+ESR_ELx_FnV_SHIFT	include/esr.h	/^#define ESR_ELx_FnV_SHIFT	/;"	d	language:C++
+ESR_ELx_IL	include/esr.h	/^#define ESR_ELx_IL	/;"	d	language:C++
+ESR_ELx_ISS_MASK	include/esr.h	/^#define ESR_ELx_ISS_MASK	/;"	d	language:C++
+ESR_ELx_ISV	include/esr.h	/^#define ESR_ELx_ISV	/;"	d	language:C++
+ESR_ELx_S1PTW	include/esr.h	/^#define ESR_ELx_S1PTW /;"	d	language:C++
+ESR_ELx_S1PTW_SHIFT	include/esr.h	/^#define ESR_ELx_S1PTW_SHIFT	/;"	d	language:C++
+ESR_ELx_SAS	include/esr.h	/^#define ESR_ELx_SAS	/;"	d	language:C++
+ESR_ELx_SAS_SHIFT	include/esr.h	/^#define ESR_ELx_SAS_SHIFT	/;"	d	language:C++
+ESR_ELx_SET_SHIFT	include/esr.h	/^#define ESR_ELx_SET_SHIFT	/;"	d	language:C++
+ESR_ELx_SF	include/esr.h	/^#define ESR_ELx_SF /;"	d	language:C++
+ESR_ELx_SF_SHIFT	include/esr.h	/^#define ESR_ELx_SF_SHIFT	/;"	d	language:C++
+ESR_ELx_SRT_MASK	include/esr.h	/^#define ESR_ELx_SRT_MASK	/;"	d	language:C++
+ESR_ELx_SRT_SHIFT	include/esr.h	/^#define ESR_ELx_SRT_SHIFT	/;"	d	language:C++
+ESR_ELx_SSE	include/esr.h	/^#define ESR_ELx_SSE	/;"	d	language:C++
+ESR_ELx_SSE_SHIFT	include/esr.h	/^#define ESR_ELx_SSE_SHIFT	/;"	d	language:C++
+ESR_ELx_WFx_ISS_WFE	include/esr.h	/^#define ESR_ELx_WFx_ISS_WFE	/;"	d	language:C++
+ESR_ELx_WNR	include/esr.h	/^#define ESR_ELx_WNR	/;"	d	language:C++
+ESR_ELx_WNR_SHIFT	include/esr.h	/^#define ESR_ELx_WNR_SHIFT	/;"	d	language:C++
+ESR_ELx_xVC_IMM_MASK	include/esr.h	/^#define ESR_ELx_xVC_IMM_MASK	/;"	d	language:C++
+FIQ_CONTROL	include/asm/irq.h	/^#define FIQ_CONTROL	/;"	d	language:C++
+GENERIC_TIMER_IRQ	include/asm/irq.h	/^#define GENERIC_TIMER_IRQ /;"	d	language:C++
+GICC_DIS_BYPASS_MASK	include/arm-gic.h	/^#define GICC_DIS_BYPASS_MASK	/;"	d	language:C++
+GICC_ENABLE	include/arm-gic.h	/^#define GICC_ENABLE	/;"	d	language:C++
+GICC_IAR_INT_ID_MASK	include/arm-gic.h	/^#define GICC_IAR_INT_ID_MASK	/;"	d	language:C++
+GICC_INT_PRI_THRESHOLD	include/arm-gic.h	/^#define GICC_INT_PRI_THRESHOLD	/;"	d	language:C++
+GICC_INT_SPURIOUS	include/arm-gic.h	/^#define GICC_INT_SPURIOUS	/;"	d	language:C++
+GICD_DISABLE	include/arm-gic.h	/^#define GICD_DISABLE	/;"	d	language:C++
+GICD_ENABLE	include/arm-gic.h	/^#define GICD_ENABLE	/;"	d	language:C++
+GICD_INT_ACTLOW_LVLTRIG	include/arm-gic.h	/^#define GICD_INT_ACTLOW_LVLTRIG	/;"	d	language:C++
+GICD_INT_DEF_PRI	include/arm-gic.h	/^#define GICD_INT_DEF_PRI	/;"	d	language:C++
+GICD_INT_DEF_PRI_X4	include/arm-gic.h	/^#define GICD_INT_DEF_PRI_X4	/;"	d	language:C++
+GICD_INT_EN_CLR_PPI	include/arm-gic.h	/^#define GICD_INT_EN_CLR_PPI	/;"	d	language:C++
+GICD_INT_EN_CLR_X32	include/arm-gic.h	/^#define GICD_INT_EN_CLR_X32	/;"	d	language:C++
+GICD_INT_EN_SET_SGI	include/arm-gic.h	/^#define GICD_INT_EN_SET_SGI	/;"	d	language:C++
+GICH_APR	include/arm-gic.h	/^#define GICH_APR	/;"	d	language:C++
+GICH_EISR0	include/arm-gic.h	/^#define GICH_EISR0 /;"	d	language:C++
+GICH_EISR1	include/arm-gic.h	/^#define GICH_EISR1 /;"	d	language:C++
+GICH_ELRSR0	include/arm-gic.h	/^#define GICH_ELRSR0 /;"	d	language:C++
+GICH_ELRSR1	include/arm-gic.h	/^#define GICH_ELRSR1 /;"	d	language:C++
+GICH_HCR	include/arm-gic.h	/^#define GICH_HCR	/;"	d	language:C++
+GICH_HCR_EN	include/arm-gic.h	/^#define GICH_HCR_EN	/;"	d	language:C++
+GICH_HCR_UIE	include/arm-gic.h	/^#define GICH_HCR_UIE	/;"	d	language:C++
+GICH_LR0	include/arm-gic.h	/^#define GICH_LR0	/;"	d	language:C++
+GICH_LR_ACTIVE_BIT	include/arm-gic.h	/^#define GICH_LR_ACTIVE_BIT	/;"	d	language:C++
+GICH_LR_EOI	include/arm-gic.h	/^#define GICH_LR_EOI	/;"	d	language:C++
+GICH_LR_PENDING_BIT	include/arm-gic.h	/^#define GICH_LR_PENDING_BIT	/;"	d	language:C++
+GICH_LR_PHYSID_CPUID	include/arm-gic.h	/^#define GICH_LR_PHYSID_CPUID	/;"	d	language:C++
+GICH_LR_PHYSID_CPUID_SHIFT	include/arm-gic.h	/^#define GICH_LR_PHYSID_CPUID_SHIFT	/;"	d	language:C++
+GICH_LR_STATE	include/arm-gic.h	/^#define GICH_LR_STATE	/;"	d	language:C++
+GICH_LR_VIRTUALID	include/arm-gic.h	/^#define GICH_LR_VIRTUALID	/;"	d	language:C++
+GICH_MISR	include/arm-gic.h	/^#define GICH_MISR	/;"	d	language:C++
+GICH_MISR_EOI	include/arm-gic.h	/^#define GICH_MISR_EOI	/;"	d	language:C++
+GICH_MISR_U	include/arm-gic.h	/^#define GICH_MISR_U	/;"	d	language:C++
+GICH_VMCR	include/arm-gic.h	/^#define GICH_VMCR	/;"	d	language:C++
+GICH_VMCR_ALIAS_BINPOINT_MASK	include/arm-gic.h	/^#define GICH_VMCR_ALIAS_BINPOINT_MASK	/;"	d	language:C++
+GICH_VMCR_ALIAS_BINPOINT_SHIFT	include/arm-gic.h	/^#define GICH_VMCR_ALIAS_BINPOINT_SHIFT	/;"	d	language:C++
+GICH_VMCR_BINPOINT_MASK	include/arm-gic.h	/^#define GICH_VMCR_BINPOINT_MASK	/;"	d	language:C++
+GICH_VMCR_BINPOINT_SHIFT	include/arm-gic.h	/^#define GICH_VMCR_BINPOINT_SHIFT	/;"	d	language:C++
+GICH_VMCR_CTRL_MASK	include/arm-gic.h	/^#define GICH_VMCR_CTRL_MASK	/;"	d	language:C++
+GICH_VMCR_CTRL_SHIFT	include/arm-gic.h	/^#define GICH_VMCR_CTRL_SHIFT	/;"	d	language:C++
+GICH_VMCR_PRIMASK_MASK	include/arm-gic.h	/^#define GICH_VMCR_PRIMASK_MASK	/;"	d	language:C++
+GICH_VMCR_PRIMASK_SHIFT	include/arm-gic.h	/^#define GICH_VMCR_PRIMASK_SHIFT	/;"	d	language:C++
+GICH_VTR	include/arm-gic.h	/^#define GICH_VTR	/;"	d	language:C++
+GIC_CPU_ACTIVEPRIO	include/arm-gic.h	/^#define GIC_CPU_ACTIVEPRIO	/;"	d	language:C++
+GIC_CPU_ALIAS_BINPOINT	include/arm-gic.h	/^#define GIC_CPU_ALIAS_BINPOINT	/;"	d	language:C++
+GIC_CPU_BINPOINT	include/arm-gic.h	/^#define GIC_CPU_BINPOINT	/;"	d	language:C++
+GIC_CPU_CTRL	include/arm-gic.h	/^#define GIC_CPU_CTRL	/;"	d	language:C++
+GIC_CPU_EOI	include/arm-gic.h	/^#define GIC_CPU_EOI	/;"	d	language:C++
+GIC_CPU_HIGHPRI	include/arm-gic.h	/^#define GIC_CPU_HIGHPRI	/;"	d	language:C++
+GIC_CPU_IDENT	include/arm-gic.h	/^#define GIC_CPU_IDENT	/;"	d	language:C++
+GIC_CPU_INTACK	include/arm-gic.h	/^#define GIC_CPU_INTACK	/;"	d	language:C++
+GIC_CPU_PRIMASK	include/arm-gic.h	/^#define GIC_CPU_PRIMASK	/;"	d	language:C++
+GIC_CPU_RUNNINGPRI	include/arm-gic.h	/^#define GIC_CPU_RUNNINGPRI	/;"	d	language:C++
+GIC_DIST_ACTIVE_CLEAR	include/arm-gic.h	/^#define GIC_DIST_ACTIVE_CLEAR	/;"	d	language:C++
+GIC_DIST_ACTIVE_SET	include/arm-gic.h	/^#define GIC_DIST_ACTIVE_SET	/;"	d	language:C++
+GIC_DIST_CONFIG	include/arm-gic.h	/^#define GIC_DIST_CONFIG	/;"	d	language:C++
+GIC_DIST_CTR	include/arm-gic.h	/^#define GIC_DIST_CTR	/;"	d	language:C++
+GIC_DIST_CTRL	include/arm-gic.h	/^#define GIC_DIST_CTRL	/;"	d	language:C++
+GIC_DIST_ENABLE_CLEAR	include/arm-gic.h	/^#define GIC_DIST_ENABLE_CLEAR	/;"	d	language:C++
+GIC_DIST_ENABLE_SET	include/arm-gic.h	/^#define GIC_DIST_ENABLE_SET	/;"	d	language:C++
+GIC_DIST_IGROUP	include/arm-gic.h	/^#define GIC_DIST_IGROUP	/;"	d	language:C++
+GIC_DIST_PENDING_CLEAR	include/arm-gic.h	/^#define GIC_DIST_PENDING_CLEAR	/;"	d	language:C++
+GIC_DIST_PENDING_SET	include/arm-gic.h	/^#define GIC_DIST_PENDING_SET	/;"	d	language:C++
+GIC_DIST_PRI	include/arm-gic.h	/^#define GIC_DIST_PRI	/;"	d	language:C++
+GIC_DIST_SGI_PENDING_CLEAR	include/arm-gic.h	/^#define GIC_DIST_SGI_PENDING_CLEAR	/;"	d	language:C++
+GIC_DIST_SGI_PENDING_SET	include/arm-gic.h	/^#define GIC_DIST_SGI_PENDING_SET	/;"	d	language:C++
+GIC_DIST_SOFTINT	include/arm-gic.h	/^#define GIC_DIST_SOFTINT	/;"	d	language:C++
+GIC_DIST_TARGET	include/arm-gic.h	/^#define GIC_DIST_TARGET	/;"	d	language:C++
+GIC_V2_CPU_INTERFACE_BASE	include/asm/base.h	/^#define GIC_V2_CPU_INTERFACE_BASE /;"	d	language:C++
+GIC_V2_DISTRIBUTOR_BASE	include/asm/base.h	/^#define GIC_V2_DISTRIBUTOR_BASE /;"	d	language:C++
+GPCLR0	include/asm/gpio.h	/^#define GPCLR0 /;"	d	language:C++
+GPFSEL1	include/asm/gpio.h	/^#define GPFSEL1 /;"	d	language:C++
+GPIO_PUP_PDN_CNTRL_REG0	include/asm/gpio.h	/^#define GPIO_PUP_PDN_CNTRL_REG0 /;"	d	language:C++
+GPPUD	include/asm/gpio.h	/^#define GPPUD /;"	d	language:C++
+GPPUDCLK0	include/asm/gpio.h	/^#define GPPUDCLK0 /;"	d	language:C++
+GPSET0	include/asm/gpio.h	/^#define GPSET0 /;"	d	language:C++
+HCR_HOST_NVHE_FLAGS	include/sysregs.h	/^#define HCR_HOST_NVHE_FLAGS /;"	d	language:C++
+HCR_RW	include/sysregs.h	/^#define HCR_RW /;"	d	language:C++
+HW_IRQ_MAX_NR	src/gic_v2.c	/^#define HW_IRQ_MAX_NR	/;"	d	language:C	file:
+HW_IRQ_START	src/gic_v2.c	/^#define HW_IRQ_START	/;"	d	language:C	file:
+HZ	src/time.c	/^#define HZ /;"	d	language:C	file:
+ID_AA64MMFR0_ASID_SHIFT	include/asm/pgtable_hwdef.h	/^#define ID_AA64MMFR0_ASID_SHIFT	/;"	d	language:C++
+ID_AA64MMFR0_BIGENDEL0_SHIFT	include/asm/pgtable_hwdef.h	/^#define ID_AA64MMFR0_BIGENDEL0_SHIFT	/;"	d	language:C++
+ID_AA64MMFR0_BIGENDEL_SHIFT	include/asm/pgtable_hwdef.h	/^#define ID_AA64MMFR0_BIGENDEL_SHIFT	/;"	d	language:C++
+ID_AA64MMFR0_PARANGE_48	include/asm/pgtable_hwdef.h	/^#define ID_AA64MMFR0_PARANGE_48	/;"	d	language:C++
+ID_AA64MMFR0_PARANGE_52	include/asm/pgtable_hwdef.h	/^#define ID_AA64MMFR0_PARANGE_52	/;"	d	language:C++
+ID_AA64MMFR0_PARANGE_SHIFT	include/asm/pgtable_hwdef.h	/^#define ID_AA64MMFR0_PARANGE_SHIFT	/;"	d	language:C++
+ID_AA64MMFR0_SNSMEM_SHIFT	include/asm/pgtable_hwdef.h	/^#define ID_AA64MMFR0_SNSMEM_SHIFT	/;"	d	language:C++
+ID_AA64MMFR0_TGRAN16_NI	include/asm/pgtable_hwdef.h	/^#define ID_AA64MMFR0_TGRAN16_NI	/;"	d	language:C++
+ID_AA64MMFR0_TGRAN16_SHIFT	include/asm/pgtable_hwdef.h	/^#define ID_AA64MMFR0_TGRAN16_SHIFT	/;"	d	language:C++
+ID_AA64MMFR0_TGRAN16_SUPPORTED	include/asm/pgtable_hwdef.h	/^#define ID_AA64MMFR0_TGRAN16_SUPPORTED	/;"	d	language:C++
+ID_AA64MMFR0_TGRAN4_NI	include/asm/pgtable_hwdef.h	/^#define ID_AA64MMFR0_TGRAN4_NI	/;"	d	language:C++
+ID_AA64MMFR0_TGRAN4_SHIFT	include/asm/pgtable_hwdef.h	/^#define ID_AA64MMFR0_TGRAN4_SHIFT	/;"	d	language:C++
+ID_AA64MMFR0_TGRAN4_SUPPORTED	include/asm/pgtable_hwdef.h	/^#define ID_AA64MMFR0_TGRAN4_SUPPORTED	/;"	d	language:C++
+ID_AA64MMFR0_TGRAN64_NI	include/asm/pgtable_hwdef.h	/^#define ID_AA64MMFR0_TGRAN64_NI	/;"	d	language:C++
+ID_AA64MMFR0_TGRAN64_SHIFT	include/asm/pgtable_hwdef.h	/^#define ID_AA64MMFR0_TGRAN64_SHIFT	/;"	d	language:C++
+ID_AA64MMFR0_TGRAN64_SUPPORTED	include/asm/pgtable_hwdef.h	/^#define ID_AA64MMFR0_TGRAN64_SUPPORTED	/;"	d	language:C++
+ID_AA64MMFR0_TGRAN_SHIFT	include/asm/pgtable_hwdef.h	/^#define ID_AA64MMFR0_TGRAN_SHIFT	/;"	d	language:C++
+ID_AA64MMFR0_TGRAN_SUPPORTED	include/asm/pgtable_hwdef.h	/^#define ID_AA64MMFR0_TGRAN_SUPPORTED	/;"	d	language:C++
+IRQ_BASIC_PENDING	include/asm/irq.h	/^#define IRQ_BASIC_PENDING	/;"	d	language:C++
+IRQ_PENDING_0	include/asm/irq.h	/^#define IRQ_PENDING_0 /;"	d	language:C++
+IRQ_PENDING_1	include/asm/irq.h	/^#define IRQ_PENDING_1	/;"	d	language:C++
+IRQ_PENDING_2	include/asm/irq.h	/^#define IRQ_PENDING_2	/;"	d	language:C++
+LEFT	src/printk.c	/^#define LEFT	/;"	d	language:C	file:
+LOCAL_TIMER_CONTROL	include/asm/arm_local_reg.h	/^#define LOCAL_TIMER_CONTROL /;"	d	language:C++
+LOCAL_TIMER_INT	include/asm/irq.h	/^#define LOCAL_TIMER_INT /;"	d	language:C++
+LOCAL_TIMER_IRQ	include/asm/arm_local_reg.h	/^#define LOCAL_TIMER_IRQ /;"	d	language:C++
+LOG_BUF_LEN	src/printk.c	/^#define LOG_BUF_LEN /;"	d	language:C	file:
+LOW_MEMORY	include/mm.h	/^#define LOW_MEMORY /;"	d	language:C++
+MAILBOX_IRQ_SHIFT	include/asm/arm_local_reg.h	/^#define MAILBOX_IRQ_SHIFT /;"	d	language:C++
+MAIR	include/mm.h	/^#define MAIR(/;"	d	language:C++	signature:(attr,mt)
+MT_DEVICE_GRE	include/mm.h	/^#define MT_DEVICE_GRE	/;"	d	language:C++
+MT_DEVICE_nGnRE	include/mm.h	/^#define MT_DEVICE_nGnRE	/;"	d	language:C++
+MT_DEVICE_nGnRnE	include/mm.h	/^#define MT_DEVICE_nGnRnE	/;"	d	language:C++
+MT_NORMAL	include/mm.h	/^#define MT_NORMAL	/;"	d	language:C++
+MT_NORMAL_NC	include/mm.h	/^#define MT_NORMAL_NC	/;"	d	language:C++
+MT_NORMAL_WT	include/mm.h	/^#define MT_NORMAL_WT	/;"	d	language:C++
+MY_LABLE	src/asm_test.S	/^#define MY_LABLE /;"	d	language:CPreProcessor	file:
+NO_BLOCK_MAPPINGS	src/mmu.c	/^#define NO_BLOCK_MAPPINGS /;"	d	language:C	file:
+NO_CONT_MAPPINGS	src/mmu.c	/^#define NO_CONT_MAPPINGS /;"	d	language:C	file:
+NR_PAGES	src/page_alloc.c	/^#define NR_PAGES	/;"	d	language:C	file:
+NSEC_PER_SEC	src/time.c	/^#define NSEC_PER_SEC /;"	d	language:C	file:
+NULL	include/type.h	/^#define NULL /;"	d	language:C++
+OBJ_FILES	Makefile	/^OBJ_FILES = $(C_FILES:$(SRC_DIR)\/%.c=$(BUILD_DIR)\/%_c.o)$/;"	m	language:Make
+PAGE_ALIGN	include/mm.h	/^#define PAGE_ALIGN(/;"	d	language:C++	signature:(addr)
+PAGE_ALIGN_DOWN	include/mm.h	/^#define PAGE_ALIGN_DOWN(/;"	d	language:C++	signature:(addr)
+PAGE_ALIGN_UP	include/mm.h	/^#define PAGE_ALIGN_UP(/;"	d	language:C++	signature:(addr)
+PAGE_KERNEL	include/asm/pgtable_prot.h	/^#define PAGE_KERNEL /;"	d	language:C++
+PAGE_KERNEL_EXEC	include/asm/pgtable_prot.h	/^#define PAGE_KERNEL_EXEC	/;"	d	language:C++
+PAGE_KERNEL_RO	include/asm/pgtable_prot.h	/^#define PAGE_KERNEL_RO	/;"	d	language:C++
+PAGE_KERNEL_ROX	include/asm/pgtable_prot.h	/^#define PAGE_KERNEL_ROX	/;"	d	language:C++
+PAGE_MASK	include/mm.h	/^#define PAGE_MASK /;"	d	language:C++
+PAGE_SHIFT	include/mm.h	/^#define PAGE_SHIFT	/;"	d	language:C++
+PAGE_SIZE	include/mm.h	/^#define PAGE_SIZE /;"	d	language:C++
+PBASE	include/asm/base.h	/^#define PBASE /;"	d	language:C++
+PBASE_END	include/asm/base.h	/^#define PBASE_END /;"	d	language:C++
+PERI_IRQ_ROUTE0	include/asm/arm_local_reg.h	/^#define PERI_IRQ_ROUTE0 /;"	d	language:C++
+PGDIR_MASK	include/asm/pgtable_hwdef.h	/^#define PGDIR_MASK /;"	d	language:C++
+PGDIR_SHIFT	include/asm/pgtable_hwdef.h	/^#define PGDIR_SHIFT /;"	d	language:C++
+PGDIR_SIZE	include/asm/pgtable_hwdef.h	/^#define PGDIR_SIZE /;"	d	language:C++
+PLUS	src/printk.c	/^#define PLUS	/;"	d	language:C	file:
+PMD_ATTRINDX	include/asm/pgtable_hwdef.h	/^#define PMD_ATTRINDX(/;"	d	language:C++	signature:(t)
+PMD_ATTRINDX_MASK	include/asm/pgtable_hwdef.h	/^#define PMD_ATTRINDX_MASK	/;"	d	language:C++
+PMD_MASK	include/asm/pgtable_hwdef.h	/^#define PMD_MASK /;"	d	language:C++
+PMD_SECT_AF	include/asm/pgtable_hwdef.h	/^#define PMD_SECT_AF	/;"	d	language:C++
+PMD_SECT_CONT	include/asm/pgtable_hwdef.h	/^#define PMD_SECT_CONT	/;"	d	language:C++
+PMD_SECT_NG	include/asm/pgtable_hwdef.h	/^#define PMD_SECT_NG	/;"	d	language:C++
+PMD_SECT_PXN	include/asm/pgtable_hwdef.h	/^#define PMD_SECT_PXN	/;"	d	language:C++
+PMD_SECT_RDONLY	include/asm/pgtable_hwdef.h	/^#define PMD_SECT_RDONLY	/;"	d	language:C++
+PMD_SECT_S	include/asm/pgtable_hwdef.h	/^#define PMD_SECT_S	/;"	d	language:C++
+PMD_SECT_USER	include/asm/pgtable_hwdef.h	/^#define PMD_SECT_USER	/;"	d	language:C++
+PMD_SECT_UXN	include/asm/pgtable_hwdef.h	/^#define PMD_SECT_UXN	/;"	d	language:C++
+PMD_SECT_VALID	include/asm/pgtable_hwdef.h	/^#define PMD_SECT_VALID	/;"	d	language:C++
+PMD_SHIFT	include/asm/pgtable_hwdef.h	/^#define PMD_SHIFT /;"	d	language:C++
+PMD_SIZE	include/asm/pgtable_hwdef.h	/^#define PMD_SIZE /;"	d	language:C++
+PMD_TABLE_BIT	include/asm/pgtable_hwdef.h	/^#define PMD_TABLE_BIT	/;"	d	language:C++
+PMD_TYPE_FAULT	include/asm/pgtable_hwdef.h	/^#define PMD_TYPE_FAULT	/;"	d	language:C++
+PMD_TYPE_MASK	include/asm/pgtable_hwdef.h	/^#define PMD_TYPE_MASK	/;"	d	language:C++
+PMD_TYPE_SECT	include/asm/pgtable_hwdef.h	/^#define PMD_TYPE_SECT	/;"	d	language:C++
+PMD_TYPE_TABLE	include/asm/pgtable_hwdef.h	/^#define PMD_TYPE_TABLE	/;"	d	language:C++
+PMU_CONTROL_CLR	include/asm/arm_local_reg.h	/^#define PMU_CONTROL_CLR /;"	d	language:C++
+PMU_CONTROL_SET	include/asm/arm_local_reg.h	/^#define PMU_CONTROL_SET /;"	d	language:C++
+PMU_IRQ	include/asm/arm_local_reg.h	/^#define PMU_IRQ /;"	d	language:C++
+PRINTK_STATUS_DOWN	src/printk.c	/^	PRINTK_STATUS_DOWN,$/;"	e	language:C	enum:printk_status	file:
+PRINTK_STATUS_READY	src/printk.c	/^	PRINTK_STATUS_READY,$/;"	e	language:C	enum:printk_status	file:
+PROT_DEFAULT	include/asm/pgtable_prot.h	/^#define PROT_DEFAULT /;"	d	language:C++
+PROT_DEVICE_nGnRE	include/asm/pgtable_prot.h	/^#define PROT_DEVICE_nGnRE	/;"	d	language:C++
+PROT_DEVICE_nGnRnE	include/asm/pgtable_prot.h	/^#define PROT_DEVICE_nGnRnE	/;"	d	language:C++
+PROT_NORMAL	include/asm/pgtable_prot.h	/^#define PROT_NORMAL /;"	d	language:C++
+PROT_NORMAL_NC	include/asm/pgtable_prot.h	/^#define PROT_NORMAL_NC	/;"	d	language:C++
+PROT_NORMAL_WT	include/asm/pgtable_prot.h	/^#define PROT_NORMAL_WT	/;"	d	language:C++
+PTE_ADDR_LOW	include/asm/pgtable_hwdef.h	/^#define PTE_ADDR_LOW /;"	d	language:C++
+PTE_ADDR_MASK	include/asm/pgtable_hwdef.h	/^#define PTE_ADDR_MASK /;"	d	language:C++
+PTE_AF	include/asm/pgtable_hwdef.h	/^#define PTE_AF	/;"	d	language:C++
+PTE_ATTRINDX	include/asm/pgtable_hwdef.h	/^#define PTE_ATTRINDX(/;"	d	language:C++	signature:(t)
+PTE_ATTRINDX_MASK	include/asm/pgtable_hwdef.h	/^#define PTE_ATTRINDX_MASK	/;"	d	language:C++
+PTE_CONT	include/asm/pgtable_hwdef.h	/^#define PTE_CONT /;"	d	language:C++
+PTE_DBM	include/asm/pgtable_hwdef.h	/^#define PTE_DBM	/;"	d	language:C++
+PTE_DIRTY	include/asm/pgtable_prot.h	/^#define PTE_DIRTY	/;"	d	language:C++
+PTE_HYP_XN	include/asm/pgtable_hwdef.h	/^#define PTE_HYP_XN /;"	d	language:C++
+PTE_MASK	include/asm/pgtable_hwdef.h	/^#define PTE_MASK /;"	d	language:C++
+PTE_NG	include/asm/pgtable_hwdef.h	/^#define PTE_NG	/;"	d	language:C++
+PTE_PROT_NONE	include/asm/pgtable_prot.h	/^#define PTE_PROT_NONE	/;"	d	language:C++
+PTE_PXN	include/asm/pgtable_hwdef.h	/^#define PTE_PXN	/;"	d	language:C++
+PTE_RDONLY	include/asm/pgtable_hwdef.h	/^#define PTE_RDONLY /;"	d	language:C++
+PTE_SHARED	include/asm/pgtable_hwdef.h	/^#define PTE_SHARED /;"	d	language:C++
+PTE_SHIFT	include/asm/pgtable_hwdef.h	/^#define PTE_SHIFT /;"	d	language:C++
+PTE_SIZE	include/asm/pgtable_hwdef.h	/^#define PTE_SIZE /;"	d	language:C++
+PTE_SPECIAL	include/asm/pgtable_prot.h	/^#define PTE_SPECIAL	/;"	d	language:C++
+PTE_TABLE_BIT	include/asm/pgtable_hwdef.h	/^#define PTE_TABLE_BIT /;"	d	language:C++
+PTE_TYPE_FAULT	include/asm/pgtable_hwdef.h	/^#define PTE_TYPE_FAULT /;"	d	language:C++
+PTE_TYPE_MASK	include/asm/pgtable_hwdef.h	/^#define PTE_TYPE_MASK /;"	d	language:C++
+PTE_TYPE_PAGE	include/asm/pgtable_hwdef.h	/^#define PTE_TYPE_PAGE /;"	d	language:C++
+PTE_USER	include/asm/pgtable_hwdef.h	/^#define PTE_USER /;"	d	language:C++
+PTE_UXN	include/asm/pgtable_hwdef.h	/^#define PTE_UXN	/;"	d	language:C++
+PTE_VALID	include/asm/pgtable_prot.h	/^#define PTE_VALID	/;"	d	language:C++
+PTE_WRITE	include/asm/pgtable_prot.h	/^#define PTE_WRITE	/;"	d	language:C++
+PTRS_PER_PGD	include/asm/pgtable_hwdef.h	/^#define PTRS_PER_PGD /;"	d	language:C++
+PTRS_PER_PMD	include/asm/pgtable_hwdef.h	/^#define PTRS_PER_PMD /;"	d	language:C++
+PTRS_PER_PTE	include/asm/pgtable_hwdef.h	/^#define PTRS_PER_PTE /;"	d	language:C++
+PTRS_PER_PUD	include/asm/pgtable_hwdef.h	/^#define PTRS_PER_PUD /;"	d	language:C++
+PUD_MASK	include/asm/pgtable_hwdef.h	/^#define PUD_MASK /;"	d	language:C++
+PUD_SHIFT	include/asm/pgtable_hwdef.h	/^#define PUD_SHIFT /;"	d	language:C++
+PUD_SIZE	include/asm/pgtable_hwdef.h	/^#define PUD_SIZE /;"	d	language:C++
+PUD_TABLE_BIT	include/asm/pgtable_hwdef.h	/^#define PUD_TABLE_BIT	/;"	d	language:C++
+PUD_TYPE_MASK	include/asm/pgtable_hwdef.h	/^#define PUD_TYPE_MASK	/;"	d	language:C++
+PUD_TYPE_SECT	include/asm/pgtable_hwdef.h	/^#define PUD_TYPE_SECT	/;"	d	language:C++
+PUD_TYPE_TABLE	include/asm/pgtable_hwdef.h	/^#define PUD_TYPE_TABLE	/;"	d	language:C++
+SCTLR_EE_LITTLE_ENDIAN	include/sysregs.h	/^#define SCTLR_EE_LITTLE_ENDIAN /;"	d	language:C++
+SCTLR_ELx_C	include/sysregs.h	/^#define SCTLR_ELx_C /;"	d	language:C++
+SCTLR_ELx_M	include/sysregs.h	/^#define SCTLR_ELx_M	/;"	d	language:C++
+SCTLR_EOE_LITTLE_ENDIAN	include/sysregs.h	/^#define SCTLR_EOE_LITTLE_ENDIAN /;"	d	language:C++
+SCTLR_MMU_DISABLED	include/sysregs.h	/^#define SCTLR_MMU_DISABLED /;"	d	language:C++
+SCTLR_VALUE_MMU_DISABLED	include/sysregs.h	/^#define SCTLR_VALUE_MMU_DISABLED /;"	d	language:C++
+SECTION_MASK	include/asm/pgtable_hwdef.h	/^#define SECTION_MASK	/;"	d	language:C++
+SECTION_SHIFT	include/asm/pgtable_hwdef.h	/^#define SECTION_SHIFT	/;"	d	language:C++
+SECTION_SHIFT	include/mm.h	/^#define SECTION_SHIFT	/;"	d	language:C++
+SECTION_SIZE	include/asm/pgtable_hwdef.h	/^#define SECTION_SIZE	/;"	d	language:C++
+SECTION_SIZE	include/mm.h	/^#define SECTION_SIZE	/;"	d	language:C++
+SIGN	src/printk.c	/^#define SIGN	/;"	d	language:C	file:
+SMALL	src/printk.c	/^#define SMALL	/;"	d	language:C	file:
+SPACE	src/printk.c	/^#define SPACE	/;"	d	language:C	file:
+SPECIAL	src/printk.c	/^#define SPECIAL	/;"	d	language:C	file:
+SPSR_EL1	include/sysregs.h	/^#define SPSR_EL1 /;"	d	language:C++
+SPSR_EL1h	include/sysregs.h	/^#define SPSR_EL1h /;"	d	language:C++
+SPSR_EL2	include/sysregs.h	/^#define SPSR_EL2 /;"	d	language:C++
+SPSR_EL2h	include/sysregs.h	/^#define SPSR_EL2h /;"	d	language:C++
+SPSR_MASK_ALL	include/sysregs.h	/^#define SPSR_MASK_ALL /;"	d	language:C++
+SRC_DIR	Makefile	/^SRC_DIR = src$/;"	m	language:Make
+SWAPPER_MM_MMUFLAGS	include/asm/pgtable_prot.h	/^#define SWAPPER_MM_MMUFLAGS /;"	d	language:C++
+SWAPPER_PMD_FLAGS	include/asm/pgtable_prot.h	/^#define SWAPPER_PMD_FLAGS /;"	d	language:C++
+SYSTEM_TIMER0_IRQ	include/asm/irq.h	/^#define SYSTEM_TIMER0_IRQ /;"	d	language:C++
+SYSTEM_TIMER1_IRQ	include/asm/irq.h	/^#define SYSTEM_TIMER1_IRQ /;"	d	language:C++
+SYSTEM_TIMER_IRQ_0	include/asm/irq.h	/^#define SYSTEM_TIMER_IRQ_0	/;"	d	language:C++
+SYSTEM_TIMER_IRQ_1	include/asm/irq.h	/^#define SYSTEM_TIMER_IRQ_1	/;"	d	language:C++
+SYSTEM_TIMER_IRQ_2	include/asm/irq.h	/^#define SYSTEM_TIMER_IRQ_2	/;"	d	language:C++
+SYSTEM_TIMER_IRQ_3	include/asm/irq.h	/^#define SYSTEM_TIMER_IRQ_3	/;"	d	language:C++
+SZ_1G	include/type.h	/^#define SZ_1G	/;"	d	language:C++
+SZ_1K	include/type.h	/^#define SZ_1K	/;"	d	language:C++
+SZ_1M	include/type.h	/^#define SZ_1M	/;"	d	language:C++
+SZ_4K	include/type.h	/^#define SZ_4K	/;"	d	language:C++
+S_FP	src/entry.S	/^#define S_FP /;"	d	language:CPreProcessor	file:
+S_FRAME_SIZE	src/entry.S	/^#define S_FRAME_SIZE /;"	d	language:CPreProcessor	file:
+S_LR	src/entry.S	/^#define S_LR /;"	d	language:CPreProcessor	file:
+S_PC	src/entry.S	/^#define S_PC /;"	d	language:CPreProcessor	file:
+S_PSTATE	src/entry.S	/^#define S_PSTATE /;"	d	language:CPreProcessor	file:
+S_SP	src/entry.S	/^#define S_SP /;"	d	language:CPreProcessor	file:
+S_X0	src/entry.S	/^#define S_X0 /;"	d	language:CPreProcessor	file:
+S_X1	src/entry.S	/^#define S_X1 /;"	d	language:CPreProcessor	file:
+S_X10	src/entry.S	/^#define S_X10 /;"	d	language:CPreProcessor	file:
+S_X12	src/entry.S	/^#define S_X12 /;"	d	language:CPreProcessor	file:
+S_X14	src/entry.S	/^#define S_X14 /;"	d	language:CPreProcessor	file:
+S_X16	src/entry.S	/^#define S_X16 /;"	d	language:CPreProcessor	file:
+S_X18	src/entry.S	/^#define S_X18 /;"	d	language:CPreProcessor	file:
+S_X2	src/entry.S	/^#define S_X2 /;"	d	language:CPreProcessor	file:
+S_X20	src/entry.S	/^#define S_X20 /;"	d	language:CPreProcessor	file:
+S_X22	src/entry.S	/^#define S_X22 /;"	d	language:CPreProcessor	file:
+S_X24	src/entry.S	/^#define S_X24 /;"	d	language:CPreProcessor	file:
+S_X26	src/entry.S	/^#define S_X26 /;"	d	language:CPreProcessor	file:
+S_X28	src/entry.S	/^#define S_X28 /;"	d	language:CPreProcessor	file:
+S_X3	src/entry.S	/^#define S_X3 /;"	d	language:CPreProcessor	file:
+S_X4	src/entry.S	/^#define S_X4 /;"	d	language:CPreProcessor	file:
+S_X5	src/entry.S	/^#define S_X5 /;"	d	language:CPreProcessor	file:
+S_X6	src/entry.S	/^#define S_X6 /;"	d	language:CPreProcessor	file:
+S_X7	src/entry.S	/^#define S_X7 /;"	d	language:CPreProcessor	file:
+S_X8	src/entry.S	/^#define S_X8 /;"	d	language:CPreProcessor	file:
+TABLE_SHIFT	include/mm.h	/^#define TABLE_SHIFT /;"	d	language:C++
+TCR_A1	include/asm/pgtable_hwdef.h	/^#define TCR_A1	/;"	d	language:C++
+TCR_ASID16	include/asm/pgtable_hwdef.h	/^#define TCR_ASID16	/;"	d	language:C++
+TCR_CACHE_FLAGS	include/asm/pgtable_hwdef.h	/^#define TCR_CACHE_FLAGS /;"	d	language:C++
+TCR_EPD0_MASK	include/asm/pgtable_hwdef.h	/^#define TCR_EPD0_MASK	/;"	d	language:C++
+TCR_EPD0_SHIFT	include/asm/pgtable_hwdef.h	/^#define TCR_EPD0_SHIFT	/;"	d	language:C++
+TCR_EPD1_MASK	include/asm/pgtable_hwdef.h	/^#define TCR_EPD1_MASK	/;"	d	language:C++
+TCR_EPD1_SHIFT	include/asm/pgtable_hwdef.h	/^#define TCR_EPD1_SHIFT	/;"	d	language:C++
+TCR_HA	include/asm/pgtable_hwdef.h	/^#define TCR_HA	/;"	d	language:C++
+TCR_HD	include/asm/pgtable_hwdef.h	/^#define TCR_HD	/;"	d	language:C++
+TCR_IPS_MASK	include/asm/pgtable_hwdef.h	/^#define TCR_IPS_MASK	/;"	d	language:C++
+TCR_IPS_SHIFT	include/asm/pgtable_hwdef.h	/^#define TCR_IPS_SHIFT	/;"	d	language:C++
+TCR_IRGN0_MASK	include/asm/pgtable_hwdef.h	/^#define TCR_IRGN0_MASK	/;"	d	language:C++
+TCR_IRGN0_NC	include/asm/pgtable_hwdef.h	/^#define TCR_IRGN0_NC	/;"	d	language:C++
+TCR_IRGN0_SHIFT	include/asm/pgtable_hwdef.h	/^#define TCR_IRGN0_SHIFT	/;"	d	language:C++
+TCR_IRGN0_WBWA	include/asm/pgtable_hwdef.h	/^#define TCR_IRGN0_WBWA	/;"	d	language:C++
+TCR_IRGN0_WBnWA	include/asm/pgtable_hwdef.h	/^#define TCR_IRGN0_WBnWA	/;"	d	language:C++
+TCR_IRGN0_WT	include/asm/pgtable_hwdef.h	/^#define TCR_IRGN0_WT	/;"	d	language:C++
+TCR_IRGN1_MASK	include/asm/pgtable_hwdef.h	/^#define TCR_IRGN1_MASK	/;"	d	language:C++
+TCR_IRGN1_NC	include/asm/pgtable_hwdef.h	/^#define TCR_IRGN1_NC	/;"	d	language:C++
+TCR_IRGN1_SHIFT	include/asm/pgtable_hwdef.h	/^#define TCR_IRGN1_SHIFT	/;"	d	language:C++
+TCR_IRGN1_WBWA	include/asm/pgtable_hwdef.h	/^#define TCR_IRGN1_WBWA	/;"	d	language:C++
+TCR_IRGN1_WBnWA	include/asm/pgtable_hwdef.h	/^#define TCR_IRGN1_WBnWA	/;"	d	language:C++
+TCR_IRGN1_WT	include/asm/pgtable_hwdef.h	/^#define TCR_IRGN1_WT	/;"	d	language:C++
+TCR_IRGN_MASK	include/asm/pgtable_hwdef.h	/^#define TCR_IRGN_MASK	/;"	d	language:C++
+TCR_IRGN_NC	include/asm/pgtable_hwdef.h	/^#define TCR_IRGN_NC	/;"	d	language:C++
+TCR_IRGN_WBWA	include/asm/pgtable_hwdef.h	/^#define TCR_IRGN_WBWA	/;"	d	language:C++
+TCR_IRGN_WBnWA	include/asm/pgtable_hwdef.h	/^#define TCR_IRGN_WBnWA	/;"	d	language:C++
+TCR_IRGN_WT	include/asm/pgtable_hwdef.h	/^#define TCR_IRGN_WT	/;"	d	language:C++
+TCR_KASAN_FLAGS	include/asm/pgtable_hwdef.h	/^#define TCR_KASAN_FLAGS /;"	d	language:C++
+TCR_KASLR_FLAGS	include/asm/pgtable_hwdef.h	/^#define TCR_KASLR_FLAGS /;"	d	language:C++
+TCR_NFD1	include/asm/pgtable_hwdef.h	/^#define TCR_NFD1	/;"	d	language:C++
+TCR_ORGN0_MASK	include/asm/pgtable_hwdef.h	/^#define TCR_ORGN0_MASK	/;"	d	language:C++
+TCR_ORGN0_NC	include/asm/pgtable_hwdef.h	/^#define TCR_ORGN0_NC	/;"	d	language:C++
+TCR_ORGN0_SHIFT	include/asm/pgtable_hwdef.h	/^#define TCR_ORGN0_SHIFT	/;"	d	language:C++
+TCR_ORGN0_WBWA	include/asm/pgtable_hwdef.h	/^#define TCR_ORGN0_WBWA	/;"	d	language:C++
+TCR_ORGN0_WBnWA	include/asm/pgtable_hwdef.h	/^#define TCR_ORGN0_WBnWA	/;"	d	language:C++
+TCR_ORGN0_WT	include/asm/pgtable_hwdef.h	/^#define TCR_ORGN0_WT	/;"	d	language:C++
+TCR_ORGN1_MASK	include/asm/pgtable_hwdef.h	/^#define TCR_ORGN1_MASK	/;"	d	language:C++
+TCR_ORGN1_NC	include/asm/pgtable_hwdef.h	/^#define TCR_ORGN1_NC	/;"	d	language:C++
+TCR_ORGN1_SHIFT	include/asm/pgtable_hwdef.h	/^#define TCR_ORGN1_SHIFT	/;"	d	language:C++
+TCR_ORGN1_WBWA	include/asm/pgtable_hwdef.h	/^#define TCR_ORGN1_WBWA	/;"	d	language:C++
+TCR_ORGN1_WBnWA	include/asm/pgtable_hwdef.h	/^#define TCR_ORGN1_WBnWA	/;"	d	language:C++
+TCR_ORGN1_WT	include/asm/pgtable_hwdef.h	/^#define TCR_ORGN1_WT	/;"	d	language:C++
+TCR_ORGN_MASK	include/asm/pgtable_hwdef.h	/^#define TCR_ORGN_MASK	/;"	d	language:C++
+TCR_ORGN_NC	include/asm/pgtable_hwdef.h	/^#define TCR_ORGN_NC	/;"	d	language:C++
+TCR_ORGN_WBWA	include/asm/pgtable_hwdef.h	/^#define TCR_ORGN_WBWA	/;"	d	language:C++
+TCR_ORGN_WBnWA	include/asm/pgtable_hwdef.h	/^#define TCR_ORGN_WBnWA	/;"	d	language:C++
+TCR_ORGN_WT	include/asm/pgtable_hwdef.h	/^#define TCR_ORGN_WT	/;"	d	language:C++
+TCR_SH0_INNER	include/asm/pgtable_hwdef.h	/^#define TCR_SH0_INNER	/;"	d	language:C++
+TCR_SH0_MASK	include/asm/pgtable_hwdef.h	/^#define TCR_SH0_MASK	/;"	d	language:C++
+TCR_SH0_SHIFT	include/asm/pgtable_hwdef.h	/^#define TCR_SH0_SHIFT	/;"	d	language:C++
+TCR_SH1_INNER	include/asm/pgtable_hwdef.h	/^#define TCR_SH1_INNER	/;"	d	language:C++
+TCR_SH1_MASK	include/asm/pgtable_hwdef.h	/^#define TCR_SH1_MASK	/;"	d	language:C++
+TCR_SH1_SHIFT	include/asm/pgtable_hwdef.h	/^#define TCR_SH1_SHIFT	/;"	d	language:C++
+TCR_SHARED	include/asm/pgtable_hwdef.h	/^#define TCR_SHARED	/;"	d	language:C++
+TCR_SMP_FLAGS	include/asm/pgtable_hwdef.h	/^#define TCR_SMP_FLAGS /;"	d	language:C++
+TCR_T0SZ	include/asm/pgtable_hwdef.h	/^#define TCR_T0SZ(/;"	d	language:C++	signature:(x)
+TCR_T0SZ_MASK	include/asm/pgtable_hwdef.h	/^#define TCR_T0SZ_MASK	/;"	d	language:C++
+TCR_T0SZ_OFFSET	include/asm/pgtable_hwdef.h	/^#define TCR_T0SZ_OFFSET	/;"	d	language:C++
+TCR_T1SZ	include/asm/pgtable_hwdef.h	/^#define TCR_T1SZ(/;"	d	language:C++	signature:(x)
+TCR_T1SZ_OFFSET	include/asm/pgtable_hwdef.h	/^#define TCR_T1SZ_OFFSET	/;"	d	language:C++
+TCR_TBI0	include/asm/pgtable_hwdef.h	/^#define TCR_TBI0	/;"	d	language:C++
+TCR_TBI1	include/asm/pgtable_hwdef.h	/^#define TCR_TBI1	/;"	d	language:C++
+TCR_TG0_16K	include/asm/pgtable_hwdef.h	/^#define TCR_TG0_16K	/;"	d	language:C++
+TCR_TG0_4K	include/asm/pgtable_hwdef.h	/^#define TCR_TG0_4K	/;"	d	language:C++
+TCR_TG0_64K	include/asm/pgtable_hwdef.h	/^#define TCR_TG0_64K	/;"	d	language:C++
+TCR_TG0_MASK	include/asm/pgtable_hwdef.h	/^#define TCR_TG0_MASK	/;"	d	language:C++
+TCR_TG0_SHIFT	include/asm/pgtable_hwdef.h	/^#define TCR_TG0_SHIFT	/;"	d	language:C++
+TCR_TG1_16K	include/asm/pgtable_hwdef.h	/^#define TCR_TG1_16K	/;"	d	language:C++
+TCR_TG1_4K	include/asm/pgtable_hwdef.h	/^#define TCR_TG1_4K	/;"	d	language:C++
+TCR_TG1_64K	include/asm/pgtable_hwdef.h	/^#define TCR_TG1_64K	/;"	d	language:C++
+TCR_TG1_MASK	include/asm/pgtable_hwdef.h	/^#define TCR_TG1_MASK	/;"	d	language:C++
+TCR_TG1_SHIFT	include/asm/pgtable_hwdef.h	/^#define TCR_TG1_SHIFT	/;"	d	language:C++
+TCR_TG_FLAGS	include/asm/pgtable_hwdef.h	/^#define TCR_TG_FLAGS /;"	d	language:C++
+TCR_TxSZ	include/asm/pgtable_hwdef.h	/^#define TCR_TxSZ(/;"	d	language:C++	signature:(x)
+TCR_TxSZ_WIDTH	include/asm/pgtable_hwdef.h	/^#define TCR_TxSZ_WIDTH	/;"	d	language:C++
+TEXT_ROM	src/linker.ld	/^TEXT_ROM = 0x90000;$/;"	s	language:LdScript
+TIMER_C0	include/asm/timer.h	/^#define TIMER_C0 /;"	d	language:C++
+TIMER_C1	include/asm/timer.h	/^#define TIMER_C1 /;"	d	language:C++
+TIMER_C2	include/asm/timer.h	/^#define TIMER_C2 /;"	d	language:C++
+TIMER_C3	include/asm/timer.h	/^#define TIMER_C3 /;"	d	language:C++
+TIMER_CHI	include/asm/timer.h	/^#define TIMER_CHI /;"	d	language:C++
+TIMER_CLO	include/asm/timer.h	/^#define TIMER_CLO /;"	d	language:C++
+TIMER_CNTRL0	include/asm/arm_local_reg.h	/^#define TIMER_CNTRL0 /;"	d	language:C++
+TIMER_CNTRL1	include/asm/arm_local_reg.h	/^#define TIMER_CNTRL1 /;"	d	language:C++
+TIMER_CNTRL2	include/asm/arm_local_reg.h	/^#define TIMER_CNTRL2 /;"	d	language:C++
+TIMER_CNTRL3	include/asm/arm_local_reg.h	/^#define TIMER_CNTRL3 /;"	d	language:C++
+TIMER_CS	include/asm/timer.h	/^#define TIMER_CS /;"	d	language:C++
+TIMER_CS_M0	include/asm/timer.h	/^#define TIMER_CS_M0	/;"	d	language:C++
+TIMER_CS_M1	include/asm/timer.h	/^#define TIMER_CS_M1	/;"	d	language:C++
+TIMER_CS_M2	include/asm/timer.h	/^#define TIMER_CS_M2	/;"	d	language:C++
+TIMER_CS_M3	include/asm/timer.h	/^#define TIMER_CS_M3	/;"	d	language:C++
+TIMER_CTRL	include/asm/timer.h	/^#define TIMER_CTRL /;"	d	language:C++
+TIMER_FLAG	include/asm/timer.h	/^#define TIMER_FLAG /;"	d	language:C++
+TIMER_IRQ	include/asm/arm_local_reg.h	/^#define TIMER_IRQ /;"	d	language:C++
+TOTAL_MEMORY	include/mm.h	/^#define TOTAL_MEMORY /;"	d	language:C++
+UL	include/esr.h	/^#define UL(/;"	d	language:C++	signature:(x)
+UL	include/type.h	/^#define UL(/;"	d	language:C++	signature:(x)
+ULL	include/type.h	/^#define ULL(/;"	d	language:C++	signature:(x)
+U_BASE	include/asm/pl_uart.h	/^#define U_BASE /;"	d	language:C++
+U_CR_REG	include/asm/pl_uart.h	/^#define U_CR_REG /;"	d	language:C++
+U_DATA_REG	include/asm/pl_uart.h	/^#define U_DATA_REG /;"	d	language:C++
+U_FBRD_REG	include/asm/pl_uart.h	/^#define U_FBRD_REG /;"	d	language:C++
+U_FR_REG	include/asm/pl_uart.h	/^#define U_FR_REG /;"	d	language:C++
+U_IBRD_REG	include/asm/pl_uart.h	/^#define U_IBRD_REG /;"	d	language:C++
+U_IMSC_REG	include/asm/pl_uart.h	/^#define U_IMSC_REG /;"	d	language:C++
+U_LCRH_REG	include/asm/pl_uart.h	/^#define U_LCRH_REG /;"	d	language:C++
+VA_BITS	include/mm.h	/^#define VA_BITS	/;"	d	language:C++
+ZEROPAD	src/printk.c	/^#define ZEROPAD	/;"	d	language:C	file:
+_AC	include/type.h	/^#define _AC(/;"	d	language:C++	signature:(X,Y)
+_AT	include/type.h	/^#define _AT(/;"	d	language:C++	signature:(T,X)
+_BENOS_TYPE_H	include/type.h	/^#define _BENOS_TYPE_H$/;"	d	language:C++
+_BITUL	include/type.h	/^#define _BITUL(/;"	d	language:C++	signature:(x)
+_BITULL	include/type.h	/^#define _BITULL(/;"	d	language:C++	signature:(x)
+_MINI_UART_H	include/uart.h	/^#define	_MINI_UART_H$/;"	d	language:C++
+_MM_H	include/mm.h	/^#define	_MM_H$/;"	d	language:C++
+_PROT_DEFAULT	include/asm/pgtable_prot.h	/^#define _PROT_DEFAULT	/;"	d	language:C++
+_P_BASE_H	include/asm/base.h	/^#define	_P_BASE_H$/;"	d	language:C++
+_P_BASE_H	include/io.h	/^#define _P_BASE_H$/;"	d	language:C++
+_P_GPIO_H	include/asm/gpio.h	/^#define	_P_GPIO_H$/;"	d	language:C++
+_P_UART_H	include/asm/pl_uart.h	/^#define	_P_UART_H$/;"	d	language:C++
+_SIZE_T	include/type.h	/^#define _SIZE_T$/;"	d	language:C++
+_UL	include/type.h	/^#define _UL(/;"	d	language:C++	signature:(x)
+_ULL	include/type.h	/^#define _ULL(/;"	d	language:C++	signature:(x)
+__AC	include/type.h	/^#define __AC(/;"	d	language:C++	signature:(X,Y)
+__ALIGN_MASK	include/type.h	/^#define __ALIGN_MASK(/;"	d	language:C++	signature:(x,mask)
+__MEMSET_H	src/memset.h	/^#define __MEMSET_H$/;"	d	language:C++
+__anon1b6fdff10108	include/asm/pgtable_types.h	/^typedef struct {$/;"	s	language:C++
+__anon1b6fdff10208	include/asm/pgtable_types.h	/^typedef struct {$/;"	s	language:C++
+__anon1b6fdff10308	include/asm/pgtable_types.h	/^typedef struct {$/;"	s	language:C++
+__anon1b6fdff10408	include/asm/pgtable_types.h	/^typedef struct {$/;"	s	language:C++
+__arch_getl	include/io.h	/^#define __arch_getl(/;"	d	language:C++	signature:(a)
+__arch_putl	include/io.h	/^#define __arch_putl(/;"	d	language:C++	signature:(v,a)
+__create_pgd_mapping	src/mmu.c	/^static void __create_pgd_mapping(pgd_t *pgdir, unsigned long phys,$/;"	f	language:C	typeref:typename:void	file:	signature:(pgd_t * pgdir,unsigned long phys,unsigned long virt,unsigned long size,unsigned long prot,unsigned long (* alloc_pgtable)(void),unsigned long flags)
+__create_section_mapping	src/boot.S	/^__create_section_mapping:$/;"	l	language:Asm
+__init_uart	src/early_uart.S	/^__init_uart:$/;"	l	language:Asm
+__iormb	include/io.h	/^#define __iormb(/;"	d	language:C++	signature:()
+__iowmb	include/io.h	/^#define __iowmb(/;"	d	language:C++	signature:()
+__memset	src/memset.c	/^static void *__memset(char *s, int c, size_t count)$/;"	f	language:C	typeref:typename:void *	file:	signature:(char * s,int c,size_t count)
+__memset_16bytes	src/asm_test.S	/^__memset_16bytes:$/;"	l	language:Asm
+__memset_16bytes_asm	src/memset.c	/^static void __memset_16bytes_asm(void *p, unsigned long data,$/;"	f	language:C	typeref:typename:void	file:	signature:(void * p,unsigned long data,int count)
+__memset_1bytes	src/memset.c	/^static void *__memset_1bytes(void *s, int c, size_t count)$/;"	f	language:C	typeref:typename:void *	file:	signature:(void * s,int c,size_t count)
+__pgd	include/asm/pgtable_types.h	/^#define __pgd(/;"	d	language:C++	signature:(x)
+__pmd	include/asm/pgtable_types.h	/^#define __pmd(/;"	d	language:C++	signature:(x)
+__pte	include/asm/pgtable_types.h	/^#define __pte(/;"	d	language:C++	signature:(x)
+__pud	include/asm/pgtable_types.h	/^#define __pud(/;"	d	language:C++	signature:(x)
+_data	src/linker.ld	/^	_data = .;$/;"	s	language:LdScript
+_edata	src/linker.ld	/^	_edata = .;$/;"	s	language:LdScript
+_end	src/linker.ld	/^	_end = .;$/;"	s	language:LdScript
+_erodata	src/linker.ld	/^	_erodata = .;$/;"	s	language:LdScript
+_etext	src/linker.ld	/^	_etext = .;$/;"	s	language:LdScript
+_etext_boot	src/linker.ld	/^	_etext_boot = .;$/;"	s	language:LdScript
+_rodata	src/linker.ld	/^	_rodata = .;$/;"	s	language:LdScript
+_start	src/boot.S	/^_start:$/;"	l	language:Asm
+_text	src/linker.ld	/^	_text = .;$/;"	s	language:LdScript
+addr_marker	src/dump_pgtable.c	/^struct addr_marker {$/;"	s	language:C	file:
+address_markers	src/dump_pgtable.c	/^static const struct addr_marker address_markers[] = {$/;"	v	language:C	typeref:typename:const struct addr_marker[]	file:
+adrp_data	src/asm_test.S	/^adrp_data:$/;"	l	language:Asm
+adrp_ldr_test	src/asm_test.S	/^adrp_ldr_test:$/;"	l	language:Asm
+all	Makefile	/^all : benos.bin$/;"	t	language:Make
+alloc_init_pmd	src/mmu.c	/^static void alloc_init_pmd(pud_t *pudp, unsigned long addr,$/;"	f	language:C	typeref:typename:void	file:	signature:(pud_t * pudp,unsigned long addr,unsigned long end,unsigned long phys,unsigned long prot,unsigned long (* alloc_pgtable)(void),unsigned long flags)
+alloc_init_pte	src/mmu.c	/^static void alloc_init_pte(pmd_t *pmdp, unsigned long addr,$/;"	f	language:C	typeref:typename:void	file:	signature:(pmd_t * pmdp,unsigned long addr,unsigned long end,unsigned long phys,unsigned long prot,unsigned long (* alloc_pgtable)(void),unsigned long flags)
+alloc_init_pud	src/mmu.c	/^static void alloc_init_pud(pgd_t *pgdp, unsigned long addr,$/;"	f	language:C	typeref:typename:void	file:	signature:(pgd_t * pgdp,unsigned long addr,unsigned long end,unsigned long phys,unsigned long prot,unsigned long (* alloc_pgtable)(void),unsigned long flags)
+arch_local_irq_disable	include/irq.h	/^static inline void arch_local_irq_disable(void)$/;"	f	language:C++	typeref:typename:void	signature:(void)
+arch_local_irq_enable	include/irq.h	/^static inline void arch_local_irq_enable(void)$/;"	f	language:C++	typeref:typename:void	signature:(void)
+atomic_set	src/asm_test.S	/^atomic_set:$/;"	l	language:Asm
+bad_mode	src/kernel.c	/^void bad_mode(struct pt_regs *regs, int reason, unsigned int esr)$/;"	f	language:C	typeref:typename:void	signature:(struct pt_regs * regs,int reason,unsigned int esr)
+bad_mode_handler	src/kernel.c	/^static const char * const bad_mode_handler[] = {$/;"	v	language:C	typeref:typename:const char * const[]	file:
+benos.bin	Makefile	/^benos.bin: $(SRC_DIR)\/linker.ld $(OBJ_FILES)$/;"	t	language:Make
+bits	src/dump_pgtable.c	/^	const struct prot_bits *bits;$/;"	m	language:C	struct:pg_level	typeref:typename:const struct prot_bits *	file:
+board	Makefile	/^board ?= rpi4$/;"	m	language:Make
+bss_begin	src/linker.ld	/^	bss_begin = .;$/;"	s	language:LdScript
+bss_end	src/linker.ld	/^	bss_end = .;$/;"	s	language:LdScript
+chip	src/gic_v2.c	/^	struct irq_chip *chip;$/;"	m	language:C	struct:gic_chip_data	typeref:struct:irq_chip *	file:
+clean	Makefile	/^clean :$/;"	t	language:Make
+clean_pte_bit	include/asm/pgtable.h	/^static inline pte_t clean_pte_bit(pte_t pte, unsigned long bit)$/;"	f	language:C++	typeref:typename:pte_t	signature:(pte_t pte,unsigned long bit)
+clear	src/dump_pgtable.c	/^	const char *clear;$/;"	m	language:C	struct:prot_bits	typeref:typename:const char *	file:
+cpu_init	src/mmu.c	/^static cpu_init(void)$/;"	f	language:C	file:	signature:(void)
+create_identical_mapping	src/mmu.c	/^static void create_identical_mapping(void)$/;"	f	language:C	typeref:typename:void	file:	signature:(void)
+create_mmio_mapping	src/mmu.c	/^static void create_mmio_mapping(void)$/;"	f	language:C	typeref:typename:void	file:	signature:(void)
+create_page_table	src/boot.S	/^create_page_table:$/;"	l	language:Asm
+data_fault_code	include/esr.h	/^static const char *data_fault_code[] = {$/;"	v	language:C++	typeref:typename:const char * []
+debug	Makefile	/^debug:$/;"	t	language:Make
+delay	include/io.h	/^static inline void delay(unsigned int n)$/;"	f	language:C++	typeref:typename:void	signature:(unsigned int n)
+dmb	include/asm/barrier.h	/^#define dmb(/;"	d	language:C++	signature:(opt)
+dmb	include/io.h	/^#define dmb(/;"	d	language:C++	signature:()
+do_div	src/printk.c	/^#define do_div(/;"	d	language:C	file:	signature:(n,base)
+domain	src/gic_v2.c	/^	struct irq_domain *domain;$/;"	m	language:C	struct:gic_chip_data	typeref:struct:irq_domain *	file:
+dsb	include/asm/barrier.h	/^#define dsb(/;"	d	language:C++	signature:(opt)
+dump_pgtable	src/dump_pgtable.c	/^void dump_pgtable(void)$/;"	f	language:C	typeref:typename:void	signature:(void)
+dump_prot	src/dump_pgtable.c	/^static void dump_prot(unsigned long prot, const struct prot_bits * bits,$/;"	f	language:C	typeref:typename:void	file:	signature:(unsigned long prot,const struct prot_bits * bits,size_t num)
+early_pgtable_alloc	src/mmu.c	/^static unsigned long early_pgtable_alloc(void)$/;"	f	language:C	typeref:typename:unsigned long	file:	signature:(void)
+el0_error_invalide	src/entry.S	/^el0_error_invalide:$/;"	l	language:Asm
+el0_fiq_invalide	src/entry.S	/^el0_fiq_invalide:$/;"	l	language:Asm
+el0_irq_invalide	src/entry.S	/^el0_irq_invalide:$/;"	l	language:Asm
+el0_sync_invalide	src/entry.S	/^el0_sync_invalide:$/;"	l	language:Asm
+el1_error_invalide	src/entry.S	/^el1_error_invalide:$/;"	l	language:Asm
+el1_fiq_invalide	src/entry.S	/^el1_fiq_invalide:$/;"	l	language:Asm
+el1_irq	src/entry.S	/^el1_irq:$/;"	l	language:Asm
+el1_irq_invalide	src/entry.S	/^el1_irq_invalide:$/;"	l	language:Asm
+el1_sync_invalide	src/entry.S	/^el1_sync_invalide:$/;"	l	language:Asm
+el_string1	src/boot.S	/^el_string1:$/;"	l	language:Asm
+enable_mmu	src/mmu.c	/^static int enable_mmu(void)$/;"	f	language:C	typeref:typename:int	file:	signature:(void)
+enable_mmu_asm	src/boot.S	/^enable_mmu_asm:$/;"	l	language:Asm
+enable_timer_interrupt	src/time.c	/^static void enable_timer_interrupt(void)$/;"	f	language:C	typeref:typename:void	file:	signature:(void)
+entry_el1	src/boot.S	/^entry_el1:$/;"	l	language:Asm
+entry_el2	src/boot.S	/^entry_el2:$/;"	l	language:Asm
+entry_el3	src/boot.S	/^entry_el3:$/;"	l	language:Asm
+esr_class_str	include/esr.h	/^static const char *esr_class_str[] = {$/;"	v	language:C++	typeref:typename:const char * []
+esr_get_class_string	include/esr.h	/^static const char *esr_get_class_string(unsigned int esr)$/;"	f	language:C++	typeref:typename:const char *	signature:(unsigned int esr)
+esr_get_dfsc_string	include/esr.h	/^static const char *esr_get_dfsc_string(unsigned int esr)$/;"	f	language:C++	typeref:typename:const char *	signature:(unsigned int esr)
+free_page	src/page_alloc.c	/^void free_page(unsigned long phys)$/;"	f	language:C	typeref:typename:void	signature:(unsigned long phys)
+g_printk_status	src/printk.c	/^static enum printk_status g_printk_status = PRINTK_STATUS_DOWN;$/;"	v	language:C	typeref:enum:printk_status	file:
+g_record	src/printk.c	/^static char *g_record = log_buf;$/;"	v	language:C	typeref:typename:char *	file:
+g_record_len	src/printk.c	/^static unsigned long g_record_len;$/;"	v	language:C	typeref:typename:unsigned long	file:
+generic_timer_init	src/time.c	/^static int generic_timer_init(void)$/;"	f	language:C	typeref:typename:int	file:	signature:(void)
+generic_timer_reset	src/time.c	/^static int generic_timer_reset(unsigned int val)$/;"	f	language:C	typeref:typename:int	file:	signature:(unsigned int val)
+get_free_page	src/page_alloc.c	/^unsigned long get_free_page(void)$/;"	f	language:C	typeref:typename:unsigned long	signature:(void)
+gic_chip_data	src/gic_v2.c	/^struct gic_chip_data{$/;"	s	language:C	file:
+gic_cpu_base	src/gic_v2.c	/^#define gic_cpu_base(/;"	d	language:C	file:	signature:(d)
+gic_cpu_init	src/gic_v2.c	/^void gic_cpu_init(struct gic_chip_data *gic)$/;"	f	language:C	typeref:typename:void	signature:(struct gic_chip_data * gic)
+gic_data	src/gic_v2.c	/^static struct gic_chip_data gic_data[HW_IRQ_MAX_NR];$/;"	v	language:C	typeref:struct:gic_chip_data[]	file:
+gic_dist_base	src/gic_v2.c	/^#define gic_dist_base(/;"	d	language:C	file:	signature:(d)
+gic_dist_init	src/gic_v2.c	/^static void gic_dist_init(struct gic_chip_data *gic)$/;"	f	language:C	typeref:typename:void	file:	signature:(struct gic_chip_data * gic)
+gic_get_cpu_base	src/gic_v2.c	/^static unsigned long gic_get_cpu_base(void)$/;"	f	language:C	typeref:typename:unsigned long	file:	signature:(void)
+gic_get_cpumask	src/gic_v2.c	/^static unsigned int gic_get_cpumask(struct gic_chip_data *gic)$/;"	f	language:C	typeref:typename:unsigned int	file:	signature:(struct gic_chip_data * gic)
+gic_get_dist_base	src/gic_v2.c	/^static unsigned long gic_get_dist_base(void)$/;"	f	language:C	typeref:typename:unsigned long	file:	signature:(void)
+gic_handle_irq	src/gic_v2.c	/^void gic_handle_irq(void)$/;"	f	language:C	typeref:typename:void	signature:(void)
+gic_init	src/gic_v2.c	/^int gic_init(int chip, unsigned long dist_base, unsigned long cpu_base)$/;"	f	language:C	typeref:typename:int	signature:(int chip,unsigned long dist_base,unsigned long cpu_base)
+gic_irqs	src/gic_v2.c	/^	unsigned int gic_irqs;$/;"	m	language:C	struct:gic_chip_data	typeref:typename:unsigned int	file:
+gic_set_irq	src/gic_v2.c	/^static void gic_set_irq(int irq, unsigned int offset)$/;"	f	language:C	typeref:typename:void	file:	signature:(int irq,unsigned int offset)
+gicv2_eoi_irq	src/gic_v2.c	/^void gicv2_eoi_irq(int irq)$/;"	f	language:C	typeref:typename:void	signature:(int irq)
+gicv2_mask_irq	src/gic_v2.c	/^void gicv2_mask_irq(int irq)$/;"	f	language:C	typeref:typename:void	signature:(int irq)
+gicv2_unmask_irq	src/gic_v2.c	/^void gicv2_unmask_irq(int irq)$/;"	f	language:C	typeref:typename:void	signature:(int irq)
+handle_stimer_irq	src/time.c	/^void handle_stimer_irq(void)$/;"	f	language:C	typeref:typename:void	signature:(void)
+handle_timer_irq	src/time.c	/^void handle_timer_irq(void)$/;"	f	language:C	typeref:typename:void	signature:(void)
+idmap_pg_dir	src/linker.ld	/^	idmap_pg_dir = .;$/;"	s	language:LdScript
+idmap_pg_end	src/linker.ld	/^	idmap_pg_end = .;$/;"	s	language:LdScript
+init_pg_dir	src/linker.ld	/^	init_pg_dir = .;$/;"	s	language:LdScript
+init_printk_done	src/printk.c	/^void init_printk_done(void)$/;"	f	language:C	typeref:typename:void	signature:(void)
+inv_entry	src/entry.S	/^	.macro inv_entry el, reason$/;"	m	language:Asm
+irq_handle	src/irq.c	/^void irq_handle(void)$/;"	f	language:C	typeref:typename:void	signature:(void)
+is_digit	src/printk.c	/^#define is_digit(/;"	d	language:C	file:	signature:(c)
+isb	include/asm/barrier.h	/^#define isb(/;"	d	language:C++	signature:()
+kernel_entry	src/entry.S	/^kernel_entry:$/;"	l	language:Asm
+kernel_exit	src/entry.S	/^kernel_exit:$/;"	l	language:Asm
+kernel_main	src/kernel.c	/^void kernel_main(void)$/;"	f	language:C	typeref:typename:void	signature:(void)
+ldr_str_test	src/asm_test.S	/^ldr_str_test:$/;"	l	language:Asm
+log_buf	src/printk.c	/^static char log_buf[LOG_BUF_LEN];$/;"	v	language:C	typeref:typename:char[]	file:
+mask	src/dump_pgtable.c	/^	unsigned long mask;$/;"	m	language:C	struct:pg_level	typeref:typename:unsigned long	file:
+mask	src/dump_pgtable.c	/^	unsigned long mask;$/;"	m	language:C	struct:prot_bits	typeref:typename:unsigned long	file:
+master	src/boot.S	/^master:$/;"	l	language:Asm
+max	include/type.h	/^#define max(/;"	d	language:C++	signature:(a,b)
+mem_init	src/page_alloc.c	/^void mem_init(unsigned long start_mem, unsigned long end_mem)$/;"	f	language:C	typeref:typename:void	signature:(unsigned long start_mem,unsigned long end_mem)
+mem_map	src/page_alloc.c	/^static unsigned char mem_map[NR_PAGES] = {0};$/;"	v	language:C	typeref:typename:unsigned char[]	file:
+memcpy	src/string.c	/^void *memcpy(void *dest, const void *src, size_t count)$/;"	f	language:C	typeref:typename:void *	signature:(void * dest,const void * src,size_t count)
+memset	src/memset.c	/^void *memset(void *s, int c, size_t count)$/;"	f	language:C	typeref:typename:void *	signature:(void * s,int c,size_t count)
+memzero	src/mm.S	/^memzero:$/;"	l	language:Asm
+min	include/type.h	/^#define min(/;"	d	language:C++	signature:(a,b)
+mk_sect_prot	include/asm/pgtable.h	/^static inline unsigned long mk_sect_prot(unsigned long prot)$/;"	f	language:C++	typeref:typename:unsigned long	signature:(unsigned long prot)
+my_atomic_data	src/asm_test.S	/^my_atomic_data:$/;"	l	language:Asm
+my_atomic_write	src/asm_test.S	/^my_atomic_write:$/;"	l	language:Asm
+my_data	src/asm_test.S	/^my_data:$/;"	l	language:Asm
+myprintf	src/printk.c	/^int myprintf(char *string, unsigned int size,$/;"	f	language:C	typeref:typename:int	signature:(char * string,unsigned int size,const char * fmt,va_list arg)
+name	src/dump_pgtable.c	/^	char *name;$/;"	m	language:C	struct:addr_marker	typeref:typename:char *	file:
+name	src/dump_pgtable.c	/^	const char *name;$/;"	m	language:C	struct:pg_level	typeref:typename:const char *	file:
+num	src/dump_pgtable.c	/^	size_t num;$/;"	m	language:C	struct:pg_level	typeref:typename:size_t	file:
+number	src/printk.c	/^static char *number(char *str, unsigned long num, int base, int size, int precision$/;"	f	language:C	typeref:typename:char *	file:	signature:(char * str,unsigned long num,int base,int size,int precision,int type)
+offsetof	include/type.h	/^#define offsetof(/;"	d	language:C++	signature:(TYPE,MEMBER)
+paging_init	src/mmu.c	/^void paging_init(void)$/;"	f	language:C	typeref:typename:void	signature:(void)
+parse_esr	src/kernel.c	/^void parse_esr(unsigned int esr)$/;"	f	language:C	typeref:typename:void	signature:(unsigned int esr)
+pc	include/ptregs.h	/^	unsigned long pc;$/;"	m	language:C++	struct:pt_regs	typeref:typename:unsigned long
+pfn_pmd	include/asm/pgtable.h	/^#define pfn_pmd(/;"	d	language:C++	signature:(pfn,prot)
+pfn_pte	include/asm/pgtable.h	/^#define pfn_pte(/;"	d	language:C++	signature:(pfn,prot)
+pg_level	src/dump_pgtable.c	/^static struct pg_level pg_level[] = {$/;"	v	language:C	typeref:struct:pg_level[]	file:
+pg_level	src/dump_pgtable.c	/^struct pg_level {$/;"	s	language:C	file:
+pg_level_init	src/dump_pgtable.c	/^static void pg_level_init(void)$/;"	f	language:C	typeref:typename:void	file:	signature:(void)
+pgd	include/asm/pgtable_types.h	/^	pgdval_t pgd;$/;"	m	language:C++	struct:__anon1b6fdff10408	typeref:typename:pgdval_t
+pgd_addr_end	include/asm/pgtable.h	/^#define pgd_addr_end(/;"	d	language:C++	signature:(addr,end)
+pgd_index	include/asm/pgtable.h	/^#define pgd_index(/;"	d	language:C++	signature:(addr)
+pgd_none	include/asm/pgtable.h	/^#define pgd_none(/;"	d	language:C++	signature:(pgd)
+pgd_offset_raw	include/asm/pgtable.h	/^#define pgd_offset_raw(/;"	d	language:C++	signature:(pgd,addr)
+pgd_page_paddr	include/asm/pgtable.h	/^static inline unsigned long pgd_page_paddr(pgd_t pgd)$/;"	f	language:C++	typeref:typename:unsigned long	signature:(pgd_t pgd)
+pgd_t	include/asm/pgtable_types.h	/^} pgd_t;$/;"	t	language:C++	typeref:struct:__anon1b6fdff10408
+pgd_val	include/asm/pgtable_types.h	/^#define pgd_val(/;"	d	language:C++	signature:(x)
+pgdval_t	include/asm/pgtable_types.h	/^typedef u64 pgdval_t;$/;"	t	language:C++	typeref:typename:u64
+phy_start_address	src/page_alloc.c	/^static unsigned long phy_start_address;$/;"	v	language:C	typeref:typename:unsigned long	file:
+pmd	include/asm/pgtable_types.h	/^	pmdval_t pmd;$/;"	m	language:C++	struct:__anon1b6fdff10208	typeref:typename:pmdval_t
+pmd_addr_end	include/asm/pgtable.h	/^#define pmd_addr_end(/;"	d	language:C++	signature:(addr,end)
+pmd_index	include/asm/pgtable.h	/^#define pmd_index(/;"	d	language:C++	signature:(addr)
+pmd_none	include/asm/pgtable.h	/^#define pmd_none(/;"	d	language:C++	signature:(pmd)
+pmd_offset_phys	include/asm/pgtable.h	/^#define pmd_offset_phys(/;"	d	language:C++	signature:(pud,addr)
+pmd_page_paddr	include/asm/pgtable.h	/^static inline unsigned long pmd_page_paddr(pmd_t pmd)$/;"	f	language:C++	typeref:typename:unsigned long	signature:(pmd_t pmd)
+pmd_sect	include/asm/pgtable.h	/^#define pmd_sect(/;"	d	language:C++	signature:(pmd)
+pmd_set_section	src/mmu.c	/^void pmd_set_section(pmd_t *pmdp, unsigned long phys, unsigned long prot)$/;"	f	language:C	typeref:typename:void	signature:(pmd_t * pmdp,unsigned long phys,unsigned long prot)
+pmd_t	include/asm/pgtable_types.h	/^} pmd_t;$/;"	t	language:C++	typeref:struct:__anon1b6fdff10208
+pmd_val	include/asm/pgtable_types.h	/^#define pmd_val(/;"	d	language:C++	signature:(x)
+pmdval_t	include/asm/pgtable_types.h	/^typedef u64 pmdval_t;$/;"	t	language:C++	typeref:typename:u64
+print_buf	src/printk.c	/^static char print_buf[CONSOLE_PRINT_BUFFER_SIZE];$/;"	v	language:C	typeref:typename:char[]	file:
+print_el	src/boot.S	/^print_el:$/;"	l	language:Asm
+print_pgtable	src/dump_pgtable.c	/^static int print_pgtable(unsigned long start, unsigned long end, $/;"	f	language:C	typeref:typename:int	file:	signature:(unsigned long start,unsigned long end,int level,unsigned long val)
+printk	src/printk.c	/^int printk(const char *fmt, ...)$/;"	f	language:C	typeref:typename:int	signature:(const char * fmt,...)
+printk_status	src/printk.c	/^enum printk_status {$/;"	g	language:C	file:
+proc_hang	src/boot.S	/^proc_hang: $/;"	l	language:Asm
+prot_bits	src/dump_pgtable.c	/^struct prot_bits {$/;"	s	language:C	file:
+pstate	include/ptregs.h	/^	unsigned long pstate;$/;"	m	language:C++	struct:pt_regs	typeref:typename:unsigned long
+pt_regs	include/ptregs.h	/^struct pt_regs {$/;"	s	language:C++
+pte	include/asm/pgtable_types.h	/^	pteval_t pte;$/;"	m	language:C++	struct:__anon1b6fdff10108	typeref:typename:pteval_t
+pte_bits	src/dump_pgtable.c	/^static const struct prot_bits pte_bits[] = {$/;"	v	language:C	typeref:typename:const struct prot_bits[]	file:
+pte_index	include/asm/pgtable.h	/^#define pte_index(/;"	d	language:C++	signature:(addr)
+pte_none	include/asm/pgtable.h	/^#define pte_none(/;"	d	language:C++	signature:(ptd)
+pte_offset_phys	include/asm/pgtable.h	/^#define pte_offset_phys(/;"	d	language:C++	signature:(dir,addr)
+pte_t	include/asm/pgtable_types.h	/^} pte_t;$/;"	t	language:C++	typeref:struct:__anon1b6fdff10108
+pte_val	include/asm/pgtable_types.h	/^#define pte_val(/;"	d	language:C++	signature:(x)
+pteval_t	include/asm/pgtable_types.h	/^typedef u64 pteval_t;$/;"	t	language:C++	typeref:typename:u64
+pud	include/asm/pgtable_types.h	/^	pudval_t pud;$/;"	m	language:C++	struct:__anon1b6fdff10308	typeref:typename:pudval_t
+pud_addr_end	include/asm/pgtable.h	/^#define pud_addr_end(/;"	d	language:C++	signature:(addr,end)
+pud_index	include/asm/pgtable.h	/^#define pud_index(/;"	d	language:C++	signature:(addr)
+pud_none	include/asm/pgtable.h	/^#define pud_none(/;"	d	language:C++	signature:(pud)
+pud_offset_phys	include/asm/pgtable.h	/^#define pud_offset_phys(/;"	d	language:C++	signature:(pgd,addr)
+pud_page_paddr	include/asm/pgtable.h	/^static inline unsigned long pud_page_paddr(pud_t pud)$/;"	f	language:C++	typeref:typename:unsigned long	signature:(pud_t pud)
+pud_sect	include/asm/pgtable.h	/^#define pud_sect(/;"	d	language:C++	signature:(pud)
+pud_t	include/asm/pgtable_types.h	/^} pud_t;$/;"	t	language:C++	typeref:struct:__anon1b6fdff10308
+pud_val	include/asm/pgtable_types.h	/^#define pud_val(/;"	d	language:C++	signature:(x)
+pudval_t	include/asm/pgtable_types.h	/^typedef u64 pudval_t;$/;"	t	language:C++	typeref:typename:u64
+put_string_uart	src/early_uart.S	/^put_string_uart:$/;"	l	language:Asm
+put_uart	src/early_uart.S	/^put_uart:$/;"	l	language:Asm
+putchar	src/pl_uart.c	/^void putchar(char c)$/;"	f	language:C	typeref:typename:void	signature:(char c)
+raw_cpu_base	src/gic_v2.c	/^	unsigned long raw_cpu_base;$/;"	m	language:C	struct:gic_chip_data	typeref:typename:unsigned long	file:
+raw_dist_base	src/gic_v2.c	/^	unsigned long raw_dist_base;$/;"	m	language:C	struct:gic_chip_data	typeref:typename:unsigned long	file:
+raw_local_irq_disable	include/irq.h	/^#define raw_local_irq_disable(/;"	d	language:C++	signature:()
+raw_local_irq_enable	include/irq.h	/^#define raw_local_irq_enable(/;"	d	language:C++	signature:()
+read_sysreg	include/sysregs.h	/^#define read_sysreg(/;"	d	language:C++	signature:(reg)
+readl	include/io.h	/^#define readl(/;"	d	language:C++	signature:(c)
+readl	include/io.h	/^static inline unsigned int readl(unsigned int addr)$/;"	f	language:C++	typeref:typename:unsigned int	signature:(unsigned int addr)
+readonly_data	src/linker.ld	/^		readonly_data = .;$/;"	s	language:LdScript	section:.text
+regs	include/ptregs.h	/^	unsigned long regs[31];$/;"	m	language:C++	struct:pt_regs	typeref:typename:unsigned long[31]
+run	Makefile	/^run:$/;"	t	language:Make
+s16	include/type.h	/^typedef short s16;$/;"	t	language:C++	typeref:typename:short
+s32	include/type.h	/^typedef int s32;$/;"	t	language:C++	typeref:typename:int
+s64	include/type.h	/^typedef long long s64;$/;"	t	language:C++	typeref:typename:long long
+s8	include/type.h	/^typedef char s8;$/;"	t	language:C++	typeref:typename:char
+scan_number	src/printk.c	/^static const char *scan_number(const char *string, int *number)$/;"	f	language:C	typeref:typename:const char *	file:	signature:(const char * string,int * number)
+set	src/dump_pgtable.c	/^	const char *set;$/;"	m	language:C	struct:prot_bits	typeref:typename:const char *	file:
+set_pgd	include/asm/pgtable.h	/^static inline void set_pgd(pgd_t *pgdp, pgd_t pgd)$/;"	f	language:C++	typeref:typename:void	signature:(pgd_t * pgdp,pgd_t pgd)
+set_pmd	include/asm/pgtable.h	/^static inline void set_pmd(pmd_t *pmdp, pmd_t pmd)$/;"	f	language:C++	typeref:typename:void	signature:(pmd_t * pmdp,pmd_t pmd)
+set_pte	include/asm/pgtable.h	/^static inline void set_pte(pte_t *ptep, pte_t pte)$/;"	f	language:C++	typeref:typename:void	signature:(pte_t * ptep,pte_t pte)
+set_pte_bit	include/asm/pgtable.h	/^static inline pte_t set_pte_bit(pte_t pte, unsigned long bit)$/;"	f	language:C++	typeref:typename:pte_t	signature:(pte_t pte,unsigned long bit)
+set_pte_mkwrite	include/asm/pgtable.h	/^static inline pte_t set_pte_mkwrite(pte_t pte)$/;"	f	language:C++	typeref:typename:pte_t	signature:(pte_t pte)
+set_pte_young	include/asm/pgtable.h	/^static inline pte_t set_pte_young(pte_t pte)$/;"	f	language:C++	typeref:typename:pte_t	signature:(pte_t pte)
+set_pud	include/asm/pgtable.h	/^static inline void set_pud(pud_t *pudp, pud_t pud)$/;"	f	language:C++	typeref:typename:void	signature:(pud_t * pudp,pud_t pud)
+size_t	include/type.h	/^typedef unsigned int size_t;$/;"	t	language:C++	typeref:typename:unsigned int
+size_t	src/memset.h	/^typedef unsigned int size_t;$/;"	t	language:C++	typeref:typename:unsigned int
+size_t	src/string.c	/^typedef unsigned int size_t;$/;"	t	language:C	typeref:typename:unsigned int	file:
+sp	include/ptregs.h	/^	unsigned long sp;$/;"	m	language:C++	struct:pt_regs	typeref:typename:unsigned long
+start_address	src/dump_pgtable.c	/^	unsigned long start_address;$/;"	m	language:C	struct:addr_marker	typeref:typename:unsigned long	file:
+stimer_val	src/time.c	/^static unsigned int stimer_val = 0;$/;"	v	language:C	typeref:typename:unsigned int	file:
+strings	src/asm_test.S	/^strings:$/;"	l	language:Asm
+strlen	src/string.c	/^size_t strlen(const char *s)$/;"	f	language:C	typeref:typename:size_t	signature:(const char * s)
+sval	src/time.c	/^static unsigned int sval = 200000;$/;"	v	language:C	typeref:typename:unsigned int	file:
+system_timer_init	src/time.c	/^void system_timer_init(void)$/;"	f	language:C	typeref:typename:void	signature:(void)
+test_access_map_address	src/mmu.c	/^static int test_access_map_address(void)$/;"	f	language:C	typeref:typename:int	file:	signature:(void)
+test_access_unmap_address	src/mmu.c	/^static int test_access_unmap_address(void)$/;"	f	language:C	typeref:typename:int	file:	signature:(void)
+test_mmu	src/mmu.c	/^void test_mmu(void)$/;"	f	language:C	typeref:typename:void	signature:(void)
+test_walk_pgtable	src/dump_pgtable.c	/^void test_walk_pgtable(void)$/;"	f	language:C	typeref:typename:void	signature:(void)
+timer_init	src/time.c	/^void timer_init(void)$/;"	f	language:C	typeref:typename:void	signature:(void)
+trigger_alignment	src/entry.S	/^trigger_alignment:$/;"	l	language:Asm
+u16	include/type.h	/^typedef unsigned short u16;$/;"	t	language:C++	typeref:typename:unsigned short
+u32	include/type.h	/^typedef unsigned int u32;$/;"	t	language:C++	typeref:typename:unsigned int
+u64	include/type.h	/^typedef unsigned long long u64;$/;"	t	language:C++	typeref:typename:unsigned long long
+u8	include/type.h	/^typedef unsigned char u8;$/;"	t	language:C++	typeref:typename:unsigned char
+uart_init	src/pl_uart.c	/^void uart_init(void)$/;"	f	language:C	typeref:typename:void	signature:(void)
+uart_recv	src/pl_uart.c	/^char uart_recv(void)$/;"	f	language:C	typeref:typename:char	signature:(void)
+uart_send	src/pl_uart.c	/^void uart_send(char c)$/;"	f	language:C	typeref:typename:void	signature:(char c)
+uart_send_string	src/pl_uart.c	/^void uart_send_string(char *str)$/;"	f	language:C	typeref:typename:void	signature:(char * str)
+val	src/dump_pgtable.c	/^	unsigned long val;$/;"	m	language:C	struct:prot_bits	typeref:typename:unsigned long	file:
+val	src/time.c	/^static unsigned int val = NSEC_PER_SEC \/ HZ;$/;"	v	language:C	typeref:typename:unsigned int	file:
+vecters	src/entry.S	/^vecters:$/;"	l	language:Asm
+vtentry	src/entry.S	/^	.macro vtentry label$/;"	m	language:Asm
+walk_pgd	src/dump_pgtable.c	/^static void walk_pgd(pgd_t * pgdir, unsigned long start, unsigned long size)$/;"	f	language:C	typeref:typename:void	file:	signature:(pgd_t * pgdir,unsigned long start,unsigned long size)
+walk_pmd	src/dump_pgtable.c	/^static void walk_pmd(pud_t *pudp, unsigned long start, unsigned long end)$/;"	f	language:C	typeref:typename:void	file:	signature:(pud_t * pudp,unsigned long start,unsigned long end)
+walk_pte	src/dump_pgtable.c	/^static void walk_pte(pmd_t * pmdp, unsigned long start, unsigned long end)$/;"	f	language:C	typeref:typename:void	file:	signature:(pmd_t * pmdp,unsigned long start,unsigned long end)
+walk_pud	src/dump_pgtable.c	/^static void walk_pud(pgd_t *pgdp, unsigned long start, unsigned long end)$/;"	f	language:C	typeref:typename:void	file:	signature:(pgd_t * pgdp,unsigned long start,unsigned long end)
+walk_table	src/dump_pgtable.c	/^static pte_t *walk_table(unsigned long addr)$/;"	f	language:C	typeref:typename:pte_t *	file:	signature:(unsigned long addr)
+write_sysreg	include/sysregs.h	/^#define write_sysreg(/;"	d	language:C++	signature:(val,reg)
+writel	include/io.h	/^#define writel(/;"	d	language:C++	signature:(v,c)
+writel	include/io.h	/^static inline void writel(unsigned int value, unsigned int addr)$/;"	f	language:C++	typeref:typename:void	signature:(unsigned int value,unsigned int addr)
