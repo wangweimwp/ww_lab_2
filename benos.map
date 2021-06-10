@@ -1,0 +1,406 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x0000000000090000                TEXT_ROM = 0x90000
+                0x0000000000080000                . = 0x80000
+                0x0000000000080000                _text_boot = .
+
+.text.boot      0x0000000000080000      0x1f0
+ *(.text.boot)
+ .text.boot     0x0000000000080000      0x1f0 build/boot_s.o
+                0x0000000000080000                _start
+                0x00000000000801f0                _etext_boot = .
+                0x00000000000801f0                _text = .
+
+.text           0x0000000000080800     0x6800
+ *(.text)
+ .text          0x0000000000080800      0xa94 build/dump_pgtable_c.o
+                0x0000000000081024                dump_pgtable
+                0x00000000000811c0                test_walk_pgtable
+ .text          0x0000000000081294     0x11a0 build/printk_c.o
+                0x00000000000816ec                myprintf
+                0x0000000000082254                init_printk_done
+                0x00000000000822dc                printk
+ .text          0x0000000000082434       0x18 build/irq_c.o
+                0x0000000000082434                irq_handle
+ .text          0x000000000008244c       0xa8 build/string_c.o
+                0x000000000008244c                strlen
+                0x0000000000082490                memcpy
+ .text          0x00000000000824f4      0x148 build/page_alloc_c.o
+                0x00000000000824f4                mem_init
+                0x000000000008259c                get_free_page
+                0x0000000000082610                free_page
+ .text          0x000000000008263c      0x950 build/mmu_c.o
+                0x000000000008282c                pmd_set_section
+                0x0000000000082ea8                paging_init
+                0x0000000000082f70                test_mmu
+ .text          0x0000000000082f8c      0x260 build/pl_uart_c.o
+                0x0000000000082f8c                uart_send
+                0x0000000000082fdc                uart_recv
+                0x0000000000083024                uart_send_string
+                0x0000000000083080                uart_init
+                0x00000000000831b8                putchar
+ .text          0x00000000000831ec      0x5dc build/gic_v2_c.o
+                0x00000000000832ac                gicv2_mask_irq
+                0x00000000000832d0                gicv2_unmask_irq
+                0x00000000000832f4                gicv2_eoi_irq
+                0x00000000000835ac                gic_cpu_init
+                0x0000000000083650                gic_handle_irq
+                0x00000000000836e4                gic_init
+ .text          0x00000000000837c8      0x1d4 build/time_c.o
+                0x000000000008381c                timer_init
+                0x0000000000083850                handle_timer_irq
+                0x0000000000083880                system_timer_init
+                0x000000000008391c                handle_stimer_irq
+ .text          0x000000000008399c      0x230 build/memset_c.o
+                0x0000000000083ba0                memset
+ .text          0x0000000000083bcc      0x350 build/kernel_c.o
+                0x0000000000083c28                parse_esr
+                0x0000000000083dd8                bad_mode
+                0x0000000000083e40                kernel_main
+ *fill*         0x0000000000083f1c        0x4 
+ .text          0x0000000000083f20       0xe8 build/early_uart_s.o
+                0x0000000000083f20                __init_uart
+                0x0000000000083f84                put_uart
+                0x0000000000083fa4                put_string_uart
+ *fill*         0x0000000000084008      0x7f8 
+ .text          0x0000000000084800     0x1038 build/entry_s.o
+                0x0000000000085000                vecters
+                0x0000000000085830                trigger_alignment
+ .text          0x0000000000085838        0x0 build/boot_s.o
+ .text          0x0000000000085838       0x10 build/mm_s.o
+                0x0000000000085838                memzero
+ .text          0x0000000000085848       0xe0 build/asm_test_s.o
+                0x0000000000085848                strings
+                0x0000000000085858                my_data
+                0x0000000000085860                adrp_data
+                0x0000000000085868                ldr_str_test
+                0x0000000000085890                adrp_ldr_test
+                0x00000000000858ac                __memset_16bytes
+                0x00000000000858c4                atomic_set
+                0x00000000000858d8                my_atomic_write
+                0x0000000000086000                . = ALIGN (0x1000)
+ *fill*         0x0000000000085928      0x6d8 
+                0x0000000000086000                readonly_data = .
+                0x0000000000087000                . = (. + 0x1000)
+ *fill*         0x0000000000086000     0x1000 
+                0x0000000000087000                _etext = .
+
+.iplt           0x0000000000087000        0x0
+ .iplt          0x0000000000087000        0x0 build/dump_pgtable_c.o
+                0x0000000000087000                . = ALIGN (0x1000)
+                0x0000000000087000                _rodata = .
+
+.rodata         0x0000000000087000      0x9de
+ *(.rodata)
+ .rodata        0x0000000000087000      0x1c5 build/dump_pgtable_c.o
+ *fill*         0x00000000000871c5        0x3 
+ .rodata        0x00000000000871c8       0x57 build/printk_c.o
+ *fill*         0x000000000008721f        0x1 
+ .rodata        0x0000000000087220       0x27 build/page_alloc_c.o
+ *fill*         0x0000000000087247        0x1 
+ .rodata        0x0000000000087248       0x62 build/mmu_c.o
+ *fill*         0x00000000000872aa        0x6 
+ .rodata        0x00000000000872b0       0x59 build/gic_v2_c.o
+ *fill*         0x0000000000087309        0x7 
+ .rodata        0x0000000000087310       0x41 build/time_c.o
+ *fill*         0x0000000000087351        0x7 
+ .rodata        0x0000000000087358      0x676 build/kernel_c.o
+ *fill*         0x00000000000879ce        0x2 
+ .rodata        0x00000000000879d0        0xe build/boot_s.o
+                0x00000000000879d0                el_string1
+                0x00000000000879de                _erodata = .
+                0x00000000000879de                _data = .
+
+.eh_frame       0x00000000000879e0      0x964
+ .eh_frame      0x00000000000879e0      0x220 build/dump_pgtable_c.o
+ .eh_frame      0x0000000000087c00       0x98 build/printk_c.o
+                                         0xb0 (size before relaxing)
+ .eh_frame      0x0000000000087c98       0x20 build/irq_c.o
+                                         0x38 (size before relaxing)
+ .eh_frame      0x0000000000087cb8       0x30 build/string_c.o
+                                         0x48 (size before relaxing)
+ .eh_frame      0x0000000000087ce8       0x50 build/page_alloc_c.o
+                                         0x68 (size before relaxing)
+ .eh_frame      0x0000000000087d38      0x270 build/mmu_c.o
+                                        0x288 (size before relaxing)
+ .eh_frame      0x0000000000087fa8       0x88 build/pl_uart_c.o
+                                         0xa0 (size before relaxing)
+ .eh_frame      0x0000000000088030      0x140 build/gic_v2_c.o
+                                        0x158 (size before relaxing)
+ .eh_frame      0x0000000000088170       0xc8 build/time_c.o
+                                         0xd8 (size before relaxing)
+ .eh_frame      0x0000000000088238       0x70 build/memset_c.o
+                                         0x88 (size before relaxing)
+ .eh_frame      0x00000000000882a8       0x9c build/kernel_c.o
+                                         0xb0 (size before relaxing)
+
+.rela.dyn       0x0000000000088348        0x0
+ .rela.iplt     0x0000000000088348        0x0 build/dump_pgtable_c.o
+ .rela.got      0x0000000000088348        0x0 build/dump_pgtable_c.o
+ .rela.text.boot
+                0x0000000000088348        0x0 build/dump_pgtable_c.o
+ .rela.text     0x0000000000088348        0x0 build/dump_pgtable_c.o
+
+.data           0x0000000000088348       0x10
+ *(.data)
+ .data          0x0000000000088348        0x0 build/dump_pgtable_c.o
+ .data          0x0000000000088348        0x0 build/printk_c.o
+ .data          0x0000000000088348        0x0 build/irq_c.o
+ .data          0x0000000000088348        0x0 build/string_c.o
+ .data          0x0000000000088348        0x0 build/page_alloc_c.o
+ .data          0x0000000000088348        0x0 build/mmu_c.o
+ .data          0x0000000000088348        0x0 build/pl_uart_c.o
+ .data          0x0000000000088348        0x0 build/gic_v2_c.o
+ .data          0x0000000000088348        0x8 build/time_c.o
+ .data          0x0000000000088350        0x0 build/memset_c.o
+ .data          0x0000000000088350        0x0 build/kernel_c.o
+ .data          0x0000000000088350        0x0 build/early_uart_s.o
+ .data          0x0000000000088350        0x0 build/entry_s.o
+ .data          0x0000000000088350        0x0 build/boot_s.o
+ .data          0x0000000000088350        0x0 build/mm_s.o
+ .data          0x0000000000088350        0x8 build/asm_test_s.o
+                0x0000000000088350                my_atomic_data
+
+.data.rel.ro.local
+                0x0000000000088358      0x230
+ .data.rel.ro.local
+                0x0000000000088358      0x210 build/dump_pgtable_c.o
+ .data.rel.ro.local
+                0x0000000000088568       0x20 build/kernel_c.o
+
+.data.rel.local
+                0x0000000000088588      0x458
+ .data.rel.local
+                0x0000000000088588       0xa0 build/dump_pgtable_c.o
+ .data.rel.local
+                0x0000000000088628        0x8 build/printk_c.o
+ .data.rel.local
+                0x0000000000088630      0x3b0 build/kernel_c.o
+
+.igot.plt       0x00000000000889e0        0x0
+ .igot.plt      0x00000000000889e0        0x0 build/dump_pgtable_c.o
+
+.got            0x00000000000889e0       0x28
+ .got           0x00000000000889e0       0x28 build/dump_pgtable_c.o
+                0x00000000000889e0                _GLOBAL_OFFSET_TABLE_
+
+.got.plt        0x0000000000088a08       0x18
+ .got.plt       0x0000000000088a08       0x18 build/dump_pgtable_c.o
+                0x0000000000089000                . = ALIGN (0x1000)
+                0x0000000000089000                idmap_pg_dir = .
+                0x000000000008c000                . = (. + 0x3000)
+                0x000000000008c000                idmap_pg_end = .
+                0x000000000008c000                kernel_sp = .
+                0x000000000008d000                . = (. + 0x1000)
+                0x000000000008d000                _edata = .
+                0x000000000008d000                . = ALIGN (0x8)
+                0x000000000008d000                bss_begin = .
+
+.bss            0x000000000008d000    0x40444
+ *(.bss*)
+ .bss           0x000000000008d000        0x0 build/dump_pgtable_c.o
+ .bss           0x000000000008d000    0x20410 build/printk_c.o
+ .bss           0x00000000000ad410        0x0 build/irq_c.o
+ .bss           0x00000000000ad410        0x0 build/string_c.o
+ .bss           0x00000000000ad410    0x20008 build/page_alloc_c.o
+ .bss           0x00000000000cd418        0x0 build/mmu_c.o
+ .bss           0x00000000000cd418        0x0 build/pl_uart_c.o
+ .bss           0x00000000000cd418       0x28 build/gic_v2_c.o
+ .bss           0x00000000000cd440        0x4 build/time_c.o
+ .bss           0x00000000000cd444        0x0 build/memset_c.o
+ .bss           0x00000000000cd444        0x0 build/kernel_c.o
+ .bss           0x00000000000cd444        0x0 build/early_uart_s.o
+ .bss           0x00000000000cd444        0x0 build/entry_s.o
+ .bss           0x00000000000cd444        0x0 build/boot_s.o
+ .bss           0x00000000000cd444        0x0 build/mm_s.o
+ .bss           0x00000000000cd444        0x0 build/asm_test_s.o
+                0x00000000000cd444                bss_end = .
+                0x00000000000ce000                . = ALIGN (0x1000)
+                0x00000000000ce000                init_pg_dir = .
+                0x00000000000cf000                . = (. + 0x1000)
+                0x00000000000cf000                _end = .
+LOAD build/dump_pgtable_c.o
+LOAD build/printk_c.o
+LOAD build/irq_c.o
+LOAD build/string_c.o
+LOAD build/page_alloc_c.o
+LOAD build/mmu_c.o
+LOAD build/pl_uart_c.o
+LOAD build/gic_v2_c.o
+LOAD build/time_c.o
+LOAD build/memset_c.o
+LOAD build/kernel_c.o
+LOAD build/early_uart_s.o
+LOAD build/entry_s.o
+LOAD build/boot_s.o
+LOAD build/mm_s.o
+LOAD build/asm_test_s.o
+OUTPUT(build/benos.elf elf64-littleaarch64)
+LOAD linker stubs
+
+.debug_info     0x0000000000000000     0x2ea1
+ .debug_info    0x0000000000000000      0x9f7 build/dump_pgtable_c.o
+ .debug_info    0x00000000000009f7      0x48a build/printk_c.o
+ .debug_info    0x0000000000000e81       0x62 build/irq_c.o
+ .debug_info    0x0000000000000ee3      0x108 build/string_c.o
+ .debug_info    0x0000000000000feb      0x145 build/page_alloc_c.o
+ .debug_info    0x0000000000001130      0xaf9 build/mmu_c.o
+ .debug_info    0x0000000000001c29      0x323 build/pl_uart_c.o
+ .debug_info    0x0000000000001f4c      0x6b1 build/gic_v2_c.o
+ .debug_info    0x00000000000025fd      0x27b build/time_c.o
+ .debug_info    0x0000000000002878      0x215 build/memset_c.o
+ .debug_info    0x0000000000002a8d      0x32e build/kernel_c.o
+ .debug_info    0x0000000000002dbb       0x2e build/early_uart_s.o
+ .debug_info    0x0000000000002de9       0x2e build/entry_s.o
+ .debug_info    0x0000000000002e17       0x2e build/boot_s.o
+ .debug_info    0x0000000000002e45       0x2e build/mm_s.o
+ .debug_info    0x0000000000002e73       0x2e build/asm_test_s.o
+
+.debug_abbrev   0x0000000000000000      0xea4
+ .debug_abbrev  0x0000000000000000      0x27f build/dump_pgtable_c.o
+ .debug_abbrev  0x000000000000027f      0x1a5 build/printk_c.o
+ .debug_abbrev  0x0000000000000424       0x53 build/irq_c.o
+ .debug_abbrev  0x0000000000000477       0xb7 build/string_c.o
+ .debug_abbrev  0x000000000000052e       0xdb build/page_alloc_c.o
+ .debug_abbrev  0x0000000000000609      0x251 build/mmu_c.o
+ .debug_abbrev  0x000000000000085a       0xea build/pl_uart_c.o
+ .debug_abbrev  0x0000000000000944      0x1be build/gic_v2_c.o
+ .debug_abbrev  0x0000000000000b02      0x10a build/time_c.o
+ .debug_abbrev  0x0000000000000c0c       0xfb build/memset_c.o
+ .debug_abbrev  0x0000000000000d07      0x139 build/kernel_c.o
+ .debug_abbrev  0x0000000000000e40       0x14 build/early_uart_s.o
+ .debug_abbrev  0x0000000000000e54       0x14 build/entry_s.o
+ .debug_abbrev  0x0000000000000e68       0x14 build/boot_s.o
+ .debug_abbrev  0x0000000000000e7c       0x14 build/mm_s.o
+ .debug_abbrev  0x0000000000000e90       0x14 build/asm_test_s.o
+
+.debug_aranges  0x0000000000000000      0x300
+ .debug_aranges
+                0x0000000000000000       0x30 build/dump_pgtable_c.o
+ .debug_aranges
+                0x0000000000000030       0x30 build/printk_c.o
+ .debug_aranges
+                0x0000000000000060       0x30 build/irq_c.o
+ .debug_aranges
+                0x0000000000000090       0x30 build/string_c.o
+ .debug_aranges
+                0x00000000000000c0       0x30 build/page_alloc_c.o
+ .debug_aranges
+                0x00000000000000f0       0x30 build/mmu_c.o
+ .debug_aranges
+                0x0000000000000120       0x30 build/pl_uart_c.o
+ .debug_aranges
+                0x0000000000000150       0x30 build/gic_v2_c.o
+ .debug_aranges
+                0x0000000000000180       0x30 build/time_c.o
+ .debug_aranges
+                0x00000000000001b0       0x30 build/memset_c.o
+ .debug_aranges
+                0x00000000000001e0       0x30 build/kernel_c.o
+ .debug_aranges
+                0x0000000000000210       0x30 build/early_uart_s.o
+ .debug_aranges
+                0x0000000000000240       0x30 build/entry_s.o
+ .debug_aranges
+                0x0000000000000270       0x30 build/boot_s.o
+ .debug_aranges
+                0x00000000000002a0       0x30 build/mm_s.o
+ .debug_aranges
+                0x00000000000002d0       0x30 build/asm_test_s.o
+
+.debug_line     0x0000000000000000     0x14c6
+ .debug_line    0x0000000000000000      0x3c5 build/dump_pgtable_c.o
+ .debug_line    0x00000000000003c5      0x4e4 build/printk_c.o
+ .debug_line    0x00000000000008a9       0x45 build/irq_c.o
+ .debug_line    0x00000000000008ee       0x83 build/string_c.o
+ .debug_line    0x0000000000000971       0x9d build/page_alloc_c.o
+ .debug_line    0x0000000000000a0e      0x30a build/mmu_c.o
+ .debug_line    0x0000000000000d18       0xe0 build/pl_uart_c.o
+ .debug_line    0x0000000000000df8      0x1b1 build/gic_v2_c.o
+ .debug_line    0x0000000000000fa9       0x88 build/time_c.o
+ .debug_line    0x0000000000001031       0xf8 build/memset_c.o
+ .debug_line    0x0000000000001129      0x13b build/kernel_c.o
+ .debug_line    0x0000000000001264       0x6c build/early_uart_s.o
+ .debug_line    0x00000000000012d0       0xa6 build/entry_s.o
+ .debug_line    0x0000000000001376       0xad build/boot_s.o
+ .debug_line    0x0000000000001423       0x3d build/mm_s.o
+ .debug_line    0x0000000000001460       0x66 build/asm_test_s.o
+
+.debug_str      0x0000000000000000      0x98f
+ .debug_str     0x0000000000000000      0x2ed build/dump_pgtable_c.o
+                                        0x345 (size before relaxing)
+ .debug_str     0x00000000000002ed      0x129 build/printk_c.o
+                                        0x22b (size before relaxing)
+ .debug_str     0x0000000000000416       0x24 build/irq_c.o
+                                         0xb1 (size before relaxing)
+ .debug_str     0x000000000000043a       0x26 build/string_c.o
+                                         0xcc (size before relaxing)
+ .debug_str     0x0000000000000460       0x67 build/page_alloc_c.o
+                                        0x12a (size before relaxing)
+ .debug_str     0x00000000000004c7      0x18a build/mmu_c.o
+                                        0x388 (size before relaxing)
+ .debug_str     0x0000000000000651       0x4e build/pl_uart_c.o
+                                         0xed (size before relaxing)
+ .debug_str     0x000000000000069f      0x11e build/gic_v2_c.o
+                                        0x21f (size before relaxing)
+ .debug_str     0x00000000000007bd       0x7c build/time_c.o
+                                        0x14b (size before relaxing)
+ .debug_str     0x0000000000000839       0x46 build/memset_c.o
+                                        0x11d (size before relaxing)
+ .debug_str     0x000000000000087f       0xc4 build/kernel_c.o
+                                        0x236 (size before relaxing)
+ .debug_str     0x0000000000000943       0x1d build/early_uart_s.o
+                                         0x34 (size before relaxing)
+ .debug_str     0x0000000000000960        0xc build/entry_s.o
+                                         0x2f (size before relaxing)
+ .debug_str     0x000000000000096c        0xb build/boot_s.o
+                                         0x2e (size before relaxing)
+ .debug_str     0x0000000000000977        0x9 build/mm_s.o
+                                         0x2c (size before relaxing)
+ .debug_str     0x0000000000000980        0xf build/asm_test_s.o
+                                         0x32 (size before relaxing)
+
+.comment        0x0000000000000000       0x24
+ .comment       0x0000000000000000       0x24 build/dump_pgtable_c.o
+                                         0x25 (size before relaxing)
+ .comment       0x0000000000000024       0x25 build/printk_c.o
+ .comment       0x0000000000000024       0x25 build/irq_c.o
+ .comment       0x0000000000000024       0x25 build/string_c.o
+ .comment       0x0000000000000024       0x25 build/page_alloc_c.o
+ .comment       0x0000000000000024       0x25 build/mmu_c.o
+ .comment       0x0000000000000024       0x25 build/pl_uart_c.o
+ .comment       0x0000000000000024       0x25 build/gic_v2_c.o
+ .comment       0x0000000000000024       0x25 build/time_c.o
+ .comment       0x0000000000000024       0x25 build/memset_c.o
+ .comment       0x0000000000000024       0x25 build/kernel_c.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 build/dump_pgtable_c.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 build/printk_c.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 build/irq_c.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 build/string_c.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 build/page_alloc_c.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 build/mmu_c.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 build/pl_uart_c.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 build/gic_v2_c.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 build/time_c.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 build/memset_c.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 build/kernel_c.o
