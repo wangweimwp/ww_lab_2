@@ -103,7 +103,7 @@ void kernel_main(void)
 
 	
 
-	
+	fp_test();
 	printk("done\n");
 	memset(0x200004, 0x55, 102);
 	while (1) {
