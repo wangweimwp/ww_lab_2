@@ -43,7 +43,7 @@ entry_el2:
 
 	ldr x1, =SCTLR_VALUE_MMU_DISABLED
 	msr sctlr_el1, x1
-
+ 
 	ldr x2, =SPSR_EL1
 	msr spsr_el2, x2
 
@@ -54,6 +54,9 @@ entry_el2:
 	
 entry_el1:
 	bl print_el
+
+	ldr x5, =(3UL << 20)
+	msr cpacr_el1, x5	//设置FPEN字段，否则执行时自动陷入到EL1
 
 	ldr x5, =vecters
 	msr vbar_el1, x5

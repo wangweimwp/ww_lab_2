@@ -296,6 +296,6 @@ static int test_access_unmap_address(void)
 void test_mmu(void)
 {
 	test_access_map_address();
-	test_access_unmap_address();
+	//test_access_unmap_address();
 }
 

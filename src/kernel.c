@@ -7,6 +7,7 @@
 #include <asm/timer.h>
 #include "asm/base.h"
 #include "irq.h"
+#include "fp_neon_test.h"
 
   
 
@@ -104,6 +105,7 @@ void kernel_main(void)
 	
 
 	fp_test();
+	my_fp_neon_test();
 	printk("done\n");
 	memset(0x200004, 0x55, 102);
 	while (1) {
