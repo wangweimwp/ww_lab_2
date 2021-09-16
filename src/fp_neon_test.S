@@ -19,3 +19,29 @@ neon_test:
 
 	ret
 
+
+.global neon_test_ld2
+neon_test_ld2:
+	mov x5, xzr
+1:
+	ld2 {v0.16b, v1.16b}, [x0], 32
+	st2 {v0.16b, v1.16b}, [x1], 32
+	add x5, x5, 32
+	cmp x5, x2
+	blt 1b
+
+	ret
+
+.global neon_test_ld3
+neon_test_ld3:
+	mov x5, xzr
+1：
+	ld3 {v0.16b, v1.16b, v2.16b}, [x0], 48
+	st3 {v0.16b, v1.16b, v2.16b}, [x1], 48
+	add x5, x5, 48
+	cmp x5, x2
+	blt 1b
+
+	ret
+	
+
