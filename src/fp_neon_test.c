@@ -40,8 +40,32 @@ void my_fp_neon_test(void)
 	}
 }
 
+static unsigned char rgb24[PIC_SIZE];
+static unsigned char bgr24_c[PIC_SIZE];
+static unsigned char bgr24_asm[PIC_SIZE];
 
+void my_rgb24_bgr24_test(void)
+{
+	int i;
 
+	for(i = 0; i < PIC_SIZE; i ++)
+		rgb24[i] = i;
+
+	for(i = 0; i < (PIC_SIZE / 3); i++){
+		bgr24_c[3 * i] = rgb24[3 * i + 2];
+		bgr24_c[3 * i + 1] = rgb24[3 * i + 1];
+		bgr24_c[3 * i + 2] = rgb24[3 * i];
+	}
+
+	neon_rgb24_bgr24_test(rgb24, bgr24_asm, PIC_SIZE);
+	for(i = 0; i < PIC_SIZE; i++){
+		if(bgr24_c[i] != bgr24_asm[i]){
+			printk("neon_rgb24_bgr24_test err\n");
+			while(1);
+		}
+	}
+
+}
 
 
 

@@ -106,6 +106,7 @@ void kernel_main(void)
 
 	fp_test();
 	my_fp_neon_test();
+	my_rgb24_bgr24_test();
 	printk("done\n");
 	memset(0x200004, 0x55, 102);
 	while (1) {

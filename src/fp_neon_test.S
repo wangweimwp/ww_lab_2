@@ -1,6 +1,5 @@
 
 
-
 .global fp_test
 fp_test:
 	fmov s0, #5.25
@@ -35,7 +34,7 @@ neon_test_ld2:
 .global neon_test_ld3
 neon_test_ld3:
 	mov x5, xzr
-1：
+1:
 	ld3 {v0.16b, v1.16b, v2.16b}, [x0], 48
 	st3 {v0.16b, v1.16b, v2.16b}, [x1], 48
 	add x5, x5, 48
@@ -43,5 +42,20 @@ neon_test_ld3:
 	blt 1b
 
 	ret
-	
+
+
+.global neon_rgb24_bgr24_test
+neon_rgb24_bgr24_test:
+	mov x9, xzr
+1:
+	ld3 {v0.16b, v1.16b, v2.16b}, [x0], 48
+	mov v3.16b, v0.16b
+	mov v0.16b, v2.16b
+	mov v2.16b, v3.16b
+	st3 {v0.16b, v1.16b, v2.16b}, [x1], 48
+	add x9, x9, 48
+	cmp x9, x2
+	blt 1b
+
+	ret
 
